@@ -43,5 +43,3 @@
     -   Use `$watch` to watch for changes to the `current_treatment` and `current_dosage` variables
     -   Update the other state elements accordingly
     -   Again, the controller updates the model, the view displays its current state
-
-[alpine]: https://alpinejs.dev/

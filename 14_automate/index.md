@@ -22,6 +22,3 @@
     -   Simulate typing and button clicking
     -   Wait for the browser to update
     -   Check the cookie is present
-
-[selenium]: https://pypi.org/project/selenium/
-[selenium-tutorial]: https://selenium-python.readthedocs.io/

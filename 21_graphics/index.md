@@ -24,6 +24,3 @@
     -   A lot of calculations, many of which would have to be re-done if the X-axis labels weren't rotated
 -   Use [Frappe Charts][frappe-charts]
     -   Not as popular as [Chart.js][chart-js], but it uses SVG
-
-[chart-js]: https://www.chartjs.org/
-[frappe-charts]: https://frappe.io/charts/docs

@@ -28,7 +28,3 @@
 -   The right way to do this is to configure a directory for [static files](g:static-file)
     -   [`server_static_paths.py`](./server_static_paths.py)
     -   `Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")`
-
-[flask]: https://flask.palletsprojects.com/
-[htpy]: https://htpy.dev/
-[jinja]: https://jinja.palletsprojects.com/

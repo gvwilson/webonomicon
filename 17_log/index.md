@@ -75,5 +75,3 @@ def log_request():
                   ip=request.remote_addr,
                   user_agent=request.headers.get('User-Agent'))
 ```
-
-[structlog]: https://www.structlog.org/

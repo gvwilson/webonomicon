@@ -212,10 +212,3 @@ def row(staff_id):
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
 ```
-
-[flask]: https://flask.palletsprojects.com/
-[pony]: https://ponyorm.org/
-[pypika]: https://pypika.readthedocs.io/
-[SQLAlchemy]: https://www.sqlalchemy.org/
-[sqlite]: https://www.sqlite.org/
-[sqlmodel]: https://sqlmodel.tiangolo.com/

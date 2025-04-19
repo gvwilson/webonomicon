@@ -156,7 +156,3 @@ def create_app():
 
     return app
 ```
-
-[flask]: https://flask.palletsprojects.com/
-[polars]: https://pola.rs/
-[prettytable]: https://pypi.org/project/prettytable/

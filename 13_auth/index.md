@@ -20,5 +20,3 @@
     -   Horribly insecure (easy to fake)
     -   Only show experiments to the person who created them
     -   Handling cookies in JavaScript (or Python) is unpleasant
-
-[jinja]: https://jinja.palletsprojects.com/

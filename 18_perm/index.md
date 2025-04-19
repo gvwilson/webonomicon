@@ -40,7 +40,3 @@
     -   Modify `dict_factory` to unpack and rename
 -   Go back to [`test_permissions.py`](./test_permissions.py) and add tests using this
     -   Hard to understand without building it up in steps, but it works
-
-[postgresql]: https://www.postgresql.org/
-[pypika]: https://pypika.readthedocs.io/
-[sqlite]: https://www.sqlite.org/

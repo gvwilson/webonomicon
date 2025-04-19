@@ -37,5 +37,3 @@
 -   More common for server to return JSON that a JavaScript library in the browser translates into HTML
 -   But that approach leads to large (slow) libraries in the browser
     -   Unfair to people using mobile, on slow connections, etc.
-
-[htmx]: https://htmx.org/

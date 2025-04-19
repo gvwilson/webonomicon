@@ -15,7 +15,7 @@
     -   `hx-post="/upload"` specifies upload endpoint
     -   `hx-target="#file-list"` specifies where to display the response
     -   `hx-swap="beforeend"` specifies how to insert response (append)
--   [`server.py`](./server.py`)
+-   [`server.py`](./server.py)
     -   Secures filenames to prevent path traversal attacks
     -   Limits maximum file size
     -   Provides endpoints for uploading, listing, and deleting files
@@ -24,5 +24,3 @@
     -   Validate file types and content
     -   Virus/malware scanning
     -   Authentication and authorization for upload permissions
-
-[htmx]: https://htmx.org/

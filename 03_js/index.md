@@ -165,5 +165,3 @@ console.log(`left value is ${value}`);
 ```
 
 -   `await` makes [asynchronous operations](g:async-operation) more readable
-
-[deno]: https://deno.com/

@@ -27,5 +27,3 @@
     -   [`../migrations/01_check_add_roles_permissions.sql`](../migrations/01_check_add_roles_permissions.sql)
     -   [`../migrations/01_bwd_add_roles_permissions.sql`](../migrations/01_bwd_add_roles_permissions.sql)
 -   Keep these files in version control
-
-[sqitch]: https://sqitch.org/

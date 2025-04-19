@@ -117,5 +117,3 @@ if __name__ == "__main__":
     server = HTTPServer(server_address, RequestHandler)
     server.serve_forever()
 ```
-
-[netcat]: https://en.wikipedia.org/wiki/Netcat

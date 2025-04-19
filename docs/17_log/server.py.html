@@ -27,14 +27,12 @@
 <h1>17_log/server.py</h1>
 <pre><code>"""Server that handles file uploads with HTMX, enhanced with structured logging."""
 
-from flask import Flask, render_template, request, g
+from flask import Flask, render_template, request
 from flask_cors import CORS
 import os
 from pathlib import Path
 from werkzeug.utils import secure_filename
 import structlog
-from datetime import datetime
-from functools import wraps
 
 # Simple in-memory log storage (no thread safety needed for single-threaded mode)
 LOGS = []

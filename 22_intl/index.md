@@ -19,6 +19,3 @@
 -   [`request_lang.py`](./request_lang.py) gets a resource with an explicit `Accept-Language` header
     -   Can/should use unit tests from [Testing the Server](../08_test/index.md)
         and [Testing in the Browser](../14_automate/index.md)
-
-[gettext]: https://en.wikipedia.org/wiki/Gettext
-[jinja]: https://jinja.palletsprojects.com/

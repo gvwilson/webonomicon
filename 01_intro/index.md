@@ -40,10 +40,3 @@
 
 -   Grateful to co-authors of [Gans2020](b:Gans2020)
 -   And to everyone who gave feedback on [Wilson2022](b:Wilson2022) and [Wilson2024](b:Wilson2024)
-
-[cc_by_nc]: https://creativecommons.org/licenses/by-nc/4.0/
-[make]: https://www.gnu.org/software/make/
-[mccole]: https://pypi.org/project/mccole/
-[mit]: https://opensource.org/license/MIT
-[snailz]: https://gvwilson.github.io/snailz/
-[uv]: https://github.com/astral-sh/uv
