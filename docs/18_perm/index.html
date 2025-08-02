@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>Permissions</h1>
@@ -30,12 +61,12 @@
 <img alt="concept map of permissions" src="perm_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#actor">actor</a>, <a href="../glossary.html#permission">permission</a>, <a href="../glossary.html#role">role</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#actor">actor</a>, <a href="../glossary/#permission">permission</a>, <a href="../glossary/#role">role</a></p>
 <h2>Outline</h2>
 <ul>
 <li>Everyone can read everything<ul>
-<li>Databases like <a href="https://www.postgresql.org/">PostgreSQL</a> implement fine-grained permissions on tables and even rows</li>
-<li>But we need to do it ourself for <a href="https://www.sqlite.org/">SQLite</a></li>
+<li>Databases like [PostgreSQL][postgresql] implement fine-grained permissions on tables and even rows</li>
+<li>But we need to do it ourself for [SQLite][sqlite]</li>
 <li>Note that if someone has access to the <code>.db</code> file, we have no protection</li>
 </ul>
 </li>
@@ -44,8 +75,8 @@
 </ul>
 </li>
 <li>Standard approach:<ul>
-<li>An <a href="../glossary.html#actor">actor</a> (person or similar) has zero or more <a href="../glossary.html#role">roles</a></li>
-<li>Each role is a set of <a href="../glossary.html#permission">permissions</a></li>
+<li>An <a href="../glossary/#actor">actor</a> (person or similar) has zero or more <a href="../glossary/#role">roles</a></li>
+<li>Each role is a set of <a href="../glossary/#permission">permissions</a></li>
 <li>E.g., <em>reader</em> role has <em>read</em> permission for all tables</li>
 </ul>
 </li>
@@ -67,18 +98,18 @@
 <li>But this means we can't distinguish "no data" from "no permission"</li>
 </ul>
 </li>
-<li><a href="./explore_permissions.py.html"><code>explore_permissions.py</code></a> explores ways to do what we want with <a href="https://pypika.readthedocs.io/">PyPika</a><ul>
+<li><a href="./explore_permissions.py"><code>explore_permissions.py</code></a> explores ways to do what we want with [PyPika][pypika]<ul>
 <li>Turns out that <code>join</code> must have <code>on</code></li>
 <li>Since we want everything, use <code>x == x</code></li>
 </ul>
 </li>
 <li>Having explored ideas in the small, we can implement in the large<ul>
-<li><a href="./test_json.py.html"><code>test_json.py</code></a> uses a custom <a href="https://pypika.readthedocs.io/">PyPika</a> function to call SQLite's <code>json_group_array</code></li>
+<li><a href="./test_json.py"><code>test_json.py</code></a> uses a custom [PyPika][pypika] function to call SQLite's <code>json_group_array</code></li>
 <li>Name the JSON field <code>something__json</code></li>
 <li>Modify <code>dict_factory</code> to unpack and rename</li>
 </ul>
 </li>
-<li>Go back to <a href="./test_permissions.py.html"><code>test_permissions.py</code></a> and add tests using this<ul>
+<li>Go back to <a href="./test_permissions.py"><code>test_permissions.py</code></a> and add tests using this<ul>
 <li>Hard to understand without building it up in steps, but it works</li>
 </ul>
 </li>
@@ -86,8 +117,8 @@
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

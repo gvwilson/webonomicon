@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>A Graphical User Interface</h1>
@@ -30,15 +61,15 @@
 <img alt="concept map of GUI in browser" src="gui_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#flexbox">flexbox layout</a>, <a href="../glossary.html#radio-button">radio button</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#flexbox">flexbox layout</a>, <a href="../glossary/#radio-button">radio button</a></p>
 <h2>Outline</h2>
 <ul>
-<li>Use <a href="https://alpinejs.dev/">Alpine</a> to make a graphical editor for plate layouts<ul>
+<li>Use [Alpine][alpine] to make a graphical editor for plate layouts<ul>
 <li>What treatment is applied to each cell</li>
 <li>Personal details</li>
 </ul>
 </li>
-<li>Use CSS <a href="../glossary.html#flexbox">flexbox</a> layout to create two-column page</li>
+<li>Use CSS <a href="../glossary/#flexbox">flexbox</a> layout to create two-column page</li>
 <li><a href="./handwritten.html"><code>handwritten.html</code></a> creates everything manually</li>
 <li>Shared data stored in <code>x-data</code> attribute of enclosing <code>div</code> (the row)<ul>
 <li><code>treatments</code> is available treatments (including emptry string for "none")</li>
@@ -46,15 +77,15 @@
 <li><code>data</code> is the plate data keyed by row/column identifier</li>
 </ul>
 </li>
-<li>Selectors are <a href="../glossary.html#radio-button">radio buttons</a><ul>
+<li>Selectors are <a href="../glossary/#radio-button">radio buttons</a><ul>
 <li>Share the same name to make them a group (only one can be selected at a time)</li>
 <li>Value is self-explanatory</li>
-<li><code>x-model</code> property tells <a href="https://alpinejs.dev/">Alpine</a> what to assign the value to</li>
+<li><code>x-model</code> property tells [Alpine][alpine] what to assign the value to</li>
 <li>Writing these by hand was annoying</li>
 </ul>
 </li>
 <li>Plate is a table<ul>
-<li>Each cell's <code>x-text</code> property tells <a href="https://alpinejs.dev/">Alpine</a> where to get data to display</li>
+<li>Each cell's <code>x-text</code> property tells [Alpine][alpine] where to get data to display</li>
 <li><code>x-on:click</code> is the action to take when the cell is clicked</li>
 </ul>
 </li>
@@ -64,7 +95,7 @@
 </li>
 <li>Templating<ul>
 <li>Template in <a href="./templates/design_simple.html"><code>templates/design_simple.html</code></a></li>
-<li>For now, use <a href="./render.py.html"><code>render.py</code></a> to test it out</li>
+<li>For now, use <a href="./render.py"><code>render.py</code></a> to test it out</li>
 <li>Templated version is 51 lines instead of 72, but will automatically expand as we go to larger plates</li>
 </ul>
 </li>
@@ -85,8 +116,8 @@
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>A Server</h1>
@@ -30,10 +61,10 @@
 <img alt="concept map of Flask server" src="server_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#dataframe">dataframe</a>, <a href="../glossary.html#env-var">environment variable</a>, <a href="../glossary.html#query-parameter">query parameter</a>, <a href="../glossary.html#route">route (in server)</a>, <a href="../glossary.html#url-fragment">URL fragment</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#dataframe">dataframe</a>, <a href="../glossary/#env-var">environment variable</a>, <a href="../glossary/#query-parameter">query parameter</a>, <a href="../glossary/#route">route (in server)</a>, <a href="../glossary/#url-fragment">URL fragment</a></p>
 <h2>Outline</h2>
 <ul>
-<li><a href="./server_hello.py.html"><code>server_hello.py</code></a>: return HTML</li>
+<li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML</li>
 </ul>
 <pre class="language-py"><code class="language-py" data-file="server_hello.py">"""Hello server."""
 
@@ -56,8 +87,8 @@ def root():
     return HELLO
 </code></pre>
 <ul>
-<li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)<ul>
-<li>Or use <a href="./fetch.py.html"><code>fetch.py</code></a> to fetch and display data</li>
+<li>Go to http://127.0.0.1:5000 to view (5000 being [Flask][flask]'s default port)<ul>
+<li>Or use <a href="./fetch.py"><code>fetch.py</code></a> to fetch and display data</li>
 </ul>
 </li>
 </ul>
@@ -94,9 +125,9 @@ if __name__ == "__main__":
     main()
 </code></pre>
 <ul>
-<li><a href="./server_func.py.html"><code>server_func.py</code></a> creates the application and configures <a href="../glossary.html#route">routes</a> in a function<ul>
-<li>Get path to staff CSV from <code>DATA</code> <a href="../glossary.html#env-var">environment variable</a></li>
-<li>Read and convert to HTML with <a href="https://pypi.org/project/prettytable/">PrettyTable</a></li>
+<li><a href="./server_func.py"><code>server_func.py</code></a> creates the application and configures <a href="../glossary/#route">routes</a> in a function<ul>
+<li>Get path to staff CSV from <code>DATA</code> <a href="../glossary/#env-var">environment variable</a></li>
+<li>Read and convert to HTML with [PrettyTable][prettytable]</li>
 </ul>
 </li>
 </ul>
@@ -113,10 +144,10 @@ if __name__ == "__main__":
     return app
 </code></pre>
 <ul>
-<li><a href="./server_routes.py.html"><code>server_routes.py</code></a> configures several routes<ul>
-<li>Use <a href="../glossary.html#query-parameter">query parameters</a> or <a href="../glossary.html#url-fragment">URL fragments</a>
+<li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
+<li>Use <a href="../glossary/#query-parameter">query parameters</a> or <a href="../glossary/#url-fragment">URL fragments</a>
     to select individual row or column</li>
-<li>Use <a href="https://pola.rs/">Polars</a> to get a <a href="../glossary.html#dataframe">dataframe</a> and <a href="https://flask.palletsprojects.com/">Flask</a> to convert to JSON</li>
+<li>Use [Polars][polars] to get a <a href="../glossary/#dataframe">dataframe</a> and [Flask][flask] to convert to JSON</li>
 </ul>
 </li>
 </ul>
@@ -148,9 +179,9 @@ if __name__ == "__main__":
 <li>No endpoint should return both</li>
 </ul>
 </li>
-<li><a href="./server_err.py.html"><code>server_err.py</code></a> handles errors<ul>
+<li><a href="./server_err.py"><code>server_err.py</code></a> handles errors<ul>
 <li>Check row and column and raise exception if not there</li>
-<li>Rely on <a href="https://flask.palletsprojects.com/">Flask</a> to handle nonexistent routes</li>
+<li>Rely on [Flask][flask] to handle nonexistent routes</li>
 </ul>
 </li>
 </ul>
@@ -186,8 +217,8 @@ if __name__ == "__main__":
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

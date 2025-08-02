@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>Serving HTML</h1>
@@ -30,33 +61,33 @@
 <img alt="concept map of views in MVC" src="view_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#static-file">static file</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#static-file">static file</a></p>
 <h2>Outline</h2>
 <ul>
-<li>Introduce the view part of MVC and use <a href="https://jinja.palletsprojects.com/">Jinja</a> templates<ul>
-<li>Alternative <a href="https://htpy.dev/">htpy</a> is more amenable to debugging but harder to read</li>
+<li>Introduce the view part of MVC and use [Jinja][jinja] templates<ul>
+<li>Alternative [htpy][htpy] is more amenable to debugging but harder to read</li>
 </ul>
 </li>
-<li>Add exceptions to <a href="./util.py.html"><code>util.py</code></a><ul>
+<li>Add exceptions to <a href="./util.py"><code>util.py</code></a><ul>
 <li>Common parent for all application exceptions to make catching easier</li>
 </ul>
 </li>
-<li>Load templates from filesystem in <a href="./views.py.html"><code>views.py</code></a><ul>
+<li>Load templates from filesystem in <a href="./views.py"><code>views.py</code></a><ul>
 <li>Allow caller to override default HTML template for <code>all_staff</code> for later use</li>
 </ul>
 </li>
 <li>Pass in data as named argument</li>
 <li>Use the sample template for single-row and multi-row views</li>
-<li>No changes to <a href="./models.py.html"><code>models.py</code></a></li>
+<li>No changes to <a href="./models.py"><code>models.py</code></a></li>
 <li>A note on sub-directories:<ul>
 <li>Most servers will not load things whose paths start with <code>../</code> for security reasons</li>
-<li>Run <a href="./server_paths.py.html"><code>server_paths.py</code></a> and go to <code>/dotdot</code> to see the effect</li>
+<li>Run <a href="./server_paths.py"><code>server_paths.py</code></a> and go to <code>/dotdot</code> to see the effect</li>
 <li>So assets need to be in directories below the server's root directory</li>
-<li>But <code>../static/image.png</code> works because <a href="https://flask.palletsprojects.com/">Flask</a> removes the leading <code>../</code></li>
+<li>But <code>../static/image.png</code> works because [Flask][flask] removes the leading <code>../</code></li>
 </ul>
 </li>
-<li>The right way to do this is to configure a directory for <a href="../glossary.html#static-file">static files</a><ul>
-<li><a href="./server_static_paths.py.html"><code>server_static_paths.py</code></a></li>
+<li>The right way to do this is to configure a directory for <a href="../glossary/#static-file">static files</a><ul>
+<li><a href="./server_static_paths.py"><code>server_static_paths.py</code></a></li>
 <li><code>Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")</code></li>
 </ul>
 </li>
@@ -64,8 +95,8 @@
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

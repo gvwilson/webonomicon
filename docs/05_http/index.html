@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>HTTP</h1>
@@ -30,23 +61,23 @@
 <img alt="concept map of HTTP" src="http_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#client">client</a>, <a href="../glossary.html#dns">Domain Name System (DNS)</a>, <a href="../glossary.html#http-request">HTTP request</a>, <a href="../glossary.html#http-response">HTTP response</a>, <a href="../glossary.html#http">HyperText Transfer Protocol (HTTP)</a>, <a href="../glossary.html#ip">Internet Protocol</a>, <a href="../glossary.html#ip-address">IP address</a>, <a href="../glossary.html#port">port</a>, <a href="../glossary.html#server">server</a>, <a href="../glossary.html#socket">socket</a>, <a href="../glossary.html#tcp">Transmission Control Protocol</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#client">client</a>, <a href="../glossary/#dns">Domain Name System (DNS)</a>, <a href="../glossary/#http-request">HTTP request</a>, <a href="../glossary/#http-response">HTTP response</a>, <a href="../glossary/#http">HyperText Transfer Protocol (HTTP)</a>, <a href="../glossary/#ip">Internet Protocol</a>, <a href="../glossary/#ip-address">IP address</a>, <a href="../glossary/#port">port</a>, <a href="../glossary/#server">server</a>, <a href="../glossary/#socket">socket</a>, <a href="../glossary/#tcp">Transmission Control Protocol</a></p>
 <h2>Outline</h2>
 <ul>
 <li>Typical web application has clients and servers<ul>
-<li><a href="../glossary.html#client">Client</a> initiates communication by sending a message and waiting for a response</li>
-<li><a href="../glossary.html#server">Server</a> waits for requests and then replies to them</li>
+<li><a href="../glossary/#client">Client</a> initiates communication by sending a message and waiting for a response</li>
+<li><a href="../glossary/#server">Server</a> waits for requests and then replies to them</li>
 </ul>
 </li>
-<li>Communicate using <a href="../glossary.html#ip">Internet Protocol</a> (IP), and specifically <a href="../glossary.html#tcp">Transmission Control Protocol</a> (TCP/IP)<ul>
+<li>Communicate using <a href="../glossary/#ip">Internet Protocol</a> (IP), and specifically <a href="../glossary/#tcp">Transmission Control Protocol</a> (TCP/IP)<ul>
 <li>Makes communication between computers look like reading and writing files</li>
 </ul>
 </li>
-<li>A <a href="../glossary.html#socket">socket</a> is one end of a point-to-point channel<ul>
+<li>A <a href="../glossary/#socket">socket</a> is one end of a point-to-point channel<ul>
 <li>Consists of an IP address (identifies machine) and a port on that machine</li>
-<li><a href="../glossary.html#ip-address">IP address</a> is four 8-bit numbers(e.g., <code>93.184.216.34</code>)</li>
-<li><a href="../glossary.html#dns">Domain Name System</a> (DNS) matches these to symbolic names like <code>example.com</code></li>
-<li><a href="../glossary.html#port">Port</a> is a number in the range 0-65535</li>
+<li><a href="../glossary/#ip-address">IP address</a> is four 8-bit numbers(e.g., <code>93.184.216.34</code>)</li>
+<li><a href="../glossary/#dns">Domain Name System</a> (DNS) matches these to symbolic names like <code>example.com</code></li>
+<li><a href="../glossary/#port">Port</a> is a number in the range 0-65535</li>
 <li>Only one process can use a port at a time</li>
 </ul>
 </li>
@@ -59,7 +90,7 @@
 </ul>
 </li>
 <li><code>TCPServer</code> creates a new handler each time it gets a connection and calls that object's <code>handle</code> method</li>
-<li><a href="./simple_server.py.html"><code>simple_server.py</code></a> reads up to 1024 bytes of data and returns a message</li>
+<li><a href="./simple_server.py"><code>simple_server.py</code></a> reads up to 1024 bytes of data and returns a message</li>
 </ul>
 <pre class="language-py"><code class="language-py" data-file="simple_server.py">"""Basic socket server."""
 
@@ -85,15 +116,15 @@ if __name__ == "__main__":
     server.serve_forever()
 </code></pre>
 <ul>
-<li>Use <a href="https://en.wikipedia.org/wiki/Netcat">netcat</a> to open a connection and send some text with <a href="./send_with_nc.sh"><code>send_with_nc.sh</code></a></li>
+<li>Use [netcat][netcat] to open a connection and send some text with <a href="./send_with_nc.sh"><code>send_with_nc.sh</code></a></li>
 </ul>
 <pre class="language-sh"><code class="language-sh" data-file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
 </code></pre>
 <h3>HTTP Request and Response</h3>
 <ul>
-<li><a href="../glossary.html#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
-<li>Send <a href="../glossary.html#http-request">request</a> with path, headers, and body</li>
-<li>Get <a href="../glossary.html#http-response">response</a> with status, headers, and content</li>
+<li><a href="../glossary/#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
+<li>Send <a href="../glossary/#http-request">request</a> with path, headers, and body</li>
+<li>Get <a href="../glossary/#http-response">response</a> with status, headers, and content</li>
 </ul>
 </li>
 <li>Minimal request is just <code>GET /index.html HTTP/1.1</code><ul>
@@ -124,7 +155,7 @@ Content-Length: 53
 &lt;/html&gt;
 </code></pre>
 <ul>
-<li><a href="./http_server.py.html"><code>http_server.py</code></a> responds to <code>GET</code> with same page every time.</li>
+<li><a href="./http_server.py"><code>http_server.py</code></a> responds to <code>GET</code> with same page every time.</li>
 </ul>
 <pre class="language-py"><code class="language-py" data-file="http_server.py">from http.server import BaseHTTPRequestHandler, HTTPServer
 
@@ -148,8 +179,8 @@ if __name__ == "__main__":
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

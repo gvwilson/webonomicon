@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>Using a Database</h1>
@@ -30,19 +61,19 @@
 <img alt="concept map of database interaction in Python" src="db_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#db-schema">database schema</a>, <a href="../glossary.html#factory-function">factory function</a>, <a href="../glossary.html#multithreading">multithreading</a>, <a href="../glossary.html#orm">object-relational mapper (ORM)</a>, <a href="../glossary.html#query-builder">query builder</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#db-schema">database schema</a>, <a href="../glossary/#factory-function">factory function</a>, <a href="../glossary/#multithreading">multithreading</a>, <a href="../glossary/#orm">object-relational mapper (ORM)</a>, <a href="../glossary/#query-builder">query builder</a></p>
 <h2>Outline</h2>
 <h3>Direct SQL</h3>
 <ul>
-<li>Use <a href="https://www.sqlite.org/">SQLite</a> database in <code>./data/lab.db</code> instead of CSV file</li>
-<li>Install <code>_dict_factory</code> <a href="../glossary.html#factory-function">factory function</a>
+<li>Use [SQLite][sqlite] database in <code>./data/lab.db</code> instead of CSV file</li>
+<li>Install <code>_dict_factory</code> <a href="../glossary/#factory-function">factory function</a>
     to get results as list of dictionaries instead of list of tuples</li>
 <li>And use a flag to convert types like dates and times (used later)</li>
-<li><a href="./models_sql.py.html"><code>models_sql.py</code></a> implements model part of model-view-controller (MVC)<ul>
+<li><a href="./models_sql.py"><code>models_sql.py</code></a> implements model part of model-view-controller (MVC)<ul>
 <li>One function for each question we might ask of our data</li>
-<li>Use SQL directly instead of an <a href="../glossary.html#orm">object-relational mapper</a>
-    like <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, <a href="https://sqlmodel.tiangolo.com/">SQLModel</a>, or <a href="https://ponyorm.org/">Pony</a></li>
-<li>ORMs can be hard to debug and don't perfectly insulate programs from changes to <a href="../glossary.html#db-schema">schema</a></li>
+<li>Use SQL directly instead of an <a href="../glossary/#orm">object-relational mapper</a>
+    like [SQLAlchemy][SQLAlchemy], [SQLModel][sqlmodel], or [Pony][pony]</li>
+<li>ORMs can be hard to debug and don't perfectly insulate programs from changes to <a href="../glossary/#db-schema">schema</a></li>
 </ul>
 </li>
 </ul>
@@ -122,7 +153,7 @@ def row(staff_id):
 </code></pre>
 <ul>
 <li>Re-create connection each time model is accessed<ul>
-<li>Creating it once and attaching to the <a href="https://flask.palletsprojects.com/">Flask</a> app fails because of <a href="../glossary.html#multithreading">multithreading</a></li>
+<li>Creating it once and attaching to the [Flask][flask] app fails because of <a href="../glossary/#multithreading">multithreading</a></li>
 </ul>
 </li>
 <li>Catch SQLite exceptions and raise our own so that our server only has to catch one thing</li>
@@ -136,8 +167,8 @@ def row(staff_id):
 </ul>
 </li>
 <li>And embedded SQL isn't actually that easy to read</li>
-<li>Use the <a href="https://pypika.readthedocs.io/">PyPika</a> <a href="../glossary.html#query-builder">query builder</a></li>
-<li><a href="./pika_demo.py.html"><code>pika_demo.py</code></a> is a proof of concept</li>
+<li>Use the [PyPika][pypika] <a href="../glossary/#query-builder">query builder</a></li>
+<li><a href="./pika_demo.py"><code>pika_demo.py</code></a> is a proof of concept</li>
 </ul>
 <pre class="language-py"><code class="language-py" data-file="pika_demo.py">from pypika import Query, Table
 import sqlite3
@@ -156,7 +187,7 @@ for row in cursor.fetchall():
     print(row)
 </code></pre>
 <ul>
-<li><a href="./models_pika.py.html"><code>models_pika.py</code></a> is shorter and more readable than the SQL version</li>
+<li><a href="./models_pika.py"><code>models_pika.py</code></a> is shorter and more readable than the SQL version</li>
 </ul>
 <pre class="language-py"><code class="language-py" data-file="models_pika.py">"""Get data from database."""
 
@@ -239,8 +270,8 @@ def row(staff_id):
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

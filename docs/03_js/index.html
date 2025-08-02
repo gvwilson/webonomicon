@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>An Hour of JavaScript</h1>
@@ -31,9 +62,9 @@ that people feel they don't need to learn
 before they start using it.</p>
 <p>— Douglas Crockford</p>
 </blockquote>
-<p id="terms">Terms defined: <a href="../glossary.html#arrow-notation">arrow notation</a>, <a href="../glossary.html#async-operation">asynchronous operation</a>, <a href="../glossary.html#dotted-notation">dotted notation</a>, <a href="../glossary.html#promise">promise</a>, <a href="../glossary.html#string-interpolation">string interpolation</a>, <a href="../glossary.html#truthiness">truthiness</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#arrow-notation">arrow notation</a>, <a href="../glossary/#async-operation">asynchronous operation</a>, <a href="../glossary/#dotted-notation">dotted notation</a>, <a href="../glossary/#promise">promise</a>, <a href="../glossary/#string-interpolation">string interpolation</a>, <a href="../glossary/#truthiness">truthiness</a></p>
 <ul>
-<li>Install <a href="https://deno.com/">deno</a> for command-line JavaScript</li>
+<li>Install [deno][deno] for command-line JavaScript</li>
 </ul>
 <h2>Variables, Types, and Control Flow</h2>
 <pre class="language-js"><code class="language-js" data-file="console_log.js">console.log('hello, world');
@@ -41,7 +72,7 @@ before they start using it.</p>
 <ul>
 <li>Run program as <code>deno run program.js</code></li>
 <li><code>console</code> is a built-in module</li>
-<li>Use the same <a href="../glossary.html#dotted-notation">dotted notation</a> as Python</li>
+<li>Use the same <a href="../glossary/#dotted-notation">dotted notation</a> as Python</li>
 <li>Trailing semi-colon is no longer required but commonly used</li>
 </ul>
 <pre class="language-js"><code class="language-js" data-file="loop_if_truthiness.js">const values = [0, 1, '', 'text', undefined, null, [], [2, 3]];
@@ -68,8 +99,8 @@ for (const val of values) {
 <li>Parentheses are required</li>
 <li><code>typeof</code> is an operator not a function, and returns a string</li>
 <li><code>if</code> / <code>else if</code> / <code>else</code> work as expected</li>
-<li>Use back-quotes and <code>${…}</code> for <a href="../glossary.html#string-interpolation">string interpolation</a></li>
-<li>JavaScript considers an empty array to be <a href="../glossary.html#truthiness">truthy</a></li>
+<li>Use back-quotes and <code>${…}</code> for <a href="../glossary/#string-interpolation">string interpolation</a></li>
+<li>JavaScript considers an empty array to be <a href="../glossary/#truthiness">truthy</a></li>
 <li>Always use <code>===</code> (triple equals) and <code>!==</code> for equality</li>
 <li>Otherwise JavaScript does some strange type conversions</li>
 </ul>
@@ -145,7 +176,7 @@ console.log(`largest(3, 5) is ${largest(3, 5)}`);
 </code></pre>
 <ul>
 <li>A function is just another kind of object</li>
-<li>Can define using <a href="../glossary.html#arrow-notation">arrow notation</a> and then assign to a variable</li>
+<li>Can define using <a href="../glossary/#arrow-notation">arrow notation</a> and then assign to a variable</li>
 <li>Handy in a language that uses lots of little functions</li>
 </ul>
 <pre class="language-js"><code class="language-js" data-file="higher_order_func.js">const values = [1, -3, 5, -7];
@@ -170,7 +201,7 @@ middle.then(value =&gt; {
 });
 </code></pre>
 <ul>
-<li>A <a href="../glossary.html#promise">promise</a> represents a delayed operation</li>
+<li>A <a href="../glossary/#promise">promise</a> represents a delayed operation</li>
 <li>Use <code>.then</code> method to tell JavaScript what to do when a value becomes available<ul>
 <li>Use this a lot in web programming so that the browser won't freeze up</li>
 </ul>
@@ -180,13 +211,13 @@ middle.then(value =&gt; {
 console.log(`left value is ${value}`);
 </code></pre>
 <ul>
-<li><code>await</code> makes <a href="../glossary.html#async-operation">asynchronous operations</a> more readable</li>
+<li><code>await</code> makes <a href="../glossary/#async-operation">asynchronous operations</a> more readable</li>
 </ul>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

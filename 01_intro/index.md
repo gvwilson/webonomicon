@@ -36,7 +36,7 @@
 -   Each assay plate has a *design* showing the material applied and *readings* showing the measured response.
 -   Plates may be *invalidated* after the fact if a staff member believes it is contaminated.
 
-## Acknowledgments
+## Acknowledgments {: #acknowledgments}
 
 -   Grateful to co-authors of [Gans2020](b:Gans2020)
 -   And to everyone who gave feedback on [Wilson2022](b:Wilson2022) and [Wilson2024](b:Wilson2024)

@@ -10,18 +10,49 @@
 </head>
 <body>
 <nav>
-<div class="row">
-<div class="col-2 left">
 <a href="../">Home</a>
-</div>
-<div class="col-10 right">
-<a href="../license.html">License</a>
-	  ·
-	  <a href="../bibliography.html">Bibliography</a>
-	  ·
-	  <a href="../glossary.html">Glossary</a>
-</div>
-</div>
+      ·
+      <span class="dropdown">
+<a href="#">Lessons</a>
+<span class="dropdown-content">
+<a href="../01_intro/">Introduction</a>
+<a href="../02_htmlcss/">HTML and CSS</a>
+<a href="../03_js/">An Hour of JavaScript</a>
+<a href="../04_browser/">JavaScript in the Browser</a>
+<a href="../05_http/">HTTP</a>
+<a href="../06_server/">A Server</a>
+<a href="../07_db/">Using a Database</a>
+<a href="../08_test/">Testing the Server</a>
+<a href="../09_view/">Serving HTML</a>
+<a href="../10_forms/">Using Forms</a>
+<a href="../11_htmx/">Using HTMX</a>
+<a href="../12_migrate/">Database Migration</a>
+<a href="../13_auth/">Authentication</a>
+<a href="../14_automate/">Testing in the Browser</a>
+<a href="../15_crypt/">Encryption</a>
+<a href="../16_upload/">Uploading Files</a>
+<a href="../17_log/">Logging and Auditing</a>
+<a href="../18_perm/">Permissions</a>
+<a href="../19_access/">Accessibility</a>
+<a href="../20_gui/">A Graphical User Interface</a>
+<a href="../21_graphics/">Dynamic Graphics</a>
+<a href="../22_intl/">Internationalization</a>
+<a href="../23_sessions/">Sessions</a>
+<a href="../24_cache/">Caching</a>
+</span>
+</span>
+      ·
+      <span class="dropdown">
+<a href="#">Extras</a>
+<span class="dropdown-content">
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
+<a href="../98_workflow/">Designing a Workflow</a>
+<a href="../99_cert/">Certificates</a>
+</span>
+</span>
 </nav>
 <main>
 <h1>JavaScript in the Browser</h1>
@@ -30,13 +61,13 @@
 <img alt="concept map of JavaScript in the browser" src="browser_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#css-selector">CSS selector</a>, <a href="../glossary.html#dom">Document Object Model (DOM)</a>, <a href="../glossary.html#event-handler">event handler</a>, <a href="../glossary.html#js-async">JavaScript `async` keyword</a>, <a href="../glossary.html#js-await">JavaScript `await` keyword</a>, <a href="../glossary.html#rgb">red-green-blue (RGB) color</a></p>
+<p id="terms">Terms defined: <a href="../glossary/#css-selector">CSS selector</a>, <a href="../glossary/#dom">Document Object Model (DOM)</a>, <a href="../glossary/#event-handler">event handler</a>, <a href="../glossary/#js-async">JavaScript `async` keyword</a>, <a href="../glossary/#js-await">JavaScript `await` keyword</a>, <a href="../glossary/#rgb">red-green-blue (RGB) color</a></p>
 <h2>Outline</h2>
 <ul>
 <li>JavaScript was created to make web pages interactive<ul>
 <li>Load into page (several ways)</li>
 <li>Trigger execution (also several ways)</li>
-<li>Manipulate <a href="../glossary.html#dom">Document Object Model</a> (DOM)</li>
+<li>Manipulate <a href="../glossary/#dom">Document Object Model</a> (DOM)</li>
 </ul>
 </li>
 <li><a href="./log_on_load.html"><code>log_on_load.html</code></a><ul>
@@ -51,7 +82,7 @@
 </li>
 <li><a href="./show_headings.html"><code>show_headings.html</code></a> finds things in the DOM<ul>
 <li><code>document</code> refers to the content of the page</li>
-<li><code>getElementsByTagName</code> finds nodes match a <a href="../glossary.html#css-selector">CSS selector</a></li>
+<li><code>getElementsByTagName</code> finds nodes match a <a href="../glossary/#css-selector">CSS selector</a></li>
 </ul>
 </li>
 <li>But it doesn't show anything<ul>
@@ -69,7 +100,7 @@
 </ul>
 </li>
 <li><a href="./emphasize_multistep.html"><code>emphasize_multistep.html</code></a> does the same thing by explicitly manufacturing new nodes</li>
-<li><a href="./button_click.html"><code>button_click.html</code></a> adds a button with an <a href="../glossary.html#event-handler">event handler</a><ul>
+<li><a href="./button_click.html"><code>button_click.html</code></a> adds a button with an <a href="../glossary/#event-handler">event handler</a><ul>
 <li>Browser standards define lots of different events you can listen to</li>
 <li>You provide the function, you browser calls it when something happens</li>
 </ul>
@@ -80,9 +111,9 @@
 </ul>
 </li>
 <li><a href="./async_fetch.html"><code>async_fetch.html</code></a> introduces two new ideas<ul>
-<li>Put the code in <a href="./async_fetch.js.html"><code>async_fetch.js</code></a></li>
-<li>Use <a href="../glossary.html#js-async"><code>async</code></a> and <a href="../glossary.html#js-await"><code>await</code></a> keywords to wait for things</li>
-<li><a href="./server.py.html"><code>server.py</code></a> returns <a href="../glossary.html#rgb">RGB</a> color components</li>
+<li>Put the code in <a href="./async_fetch.js"><code>async_fetch.js</code></a></li>
+<li>Use <a href="../glossary/#js-async"><code>async</code></a> and <a href="../glossary/#js-await"><code>await</code></a> keywords to wait for things</li>
+<li><a href="./server.py"><code>server.py</code></a> returns <a href="../glossary/#rgb">RGB</a> color components</li>
 <li>Use <code>style</code> property rather than <code>setAttribute</code> because style can have many sub-properties</li>
 </ul>
 </li>
@@ -90,8 +121,8 @@
 </main>
 <footer>
 <a href="../">The Webonomicon</a>
-      copyright © 2024
-      <a href="../contributing.html#contributors">the authors</a>
+      copyright © 2025
+      <a href="../01_intro/#acknowledgments">the authors</a>
 </footer>
 </body>
 </html>

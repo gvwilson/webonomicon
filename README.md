@@ -2,12 +2,6 @@
 
 <p class="subtitle">An Introduction to Web Programming for the Cautious and Weary</p>
 
-<div class="row" markdown="1">
-  <div class="col-4 center">
-    <img src="./static/advent_05_354.png" alt="Advent 354 by Danielle Navarro" style="width: 80%">
-  </div>
-  <div class="col-8" markdown="1">
-
 This tutorial is a short introduction to web programming using modern tools and practices
 for data scientists who are comfortable using Python
 but have never built interactive websites before.
@@ -19,10 +13,6 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 > Most sections will have additional examples (and much more explanation)
 > before learners encounter it.
 > Suggestions and help are greatly appreciated.
-
-  </div>
-
-</div>
 
 ## Learner Persona
 
@@ -40,8 +30,6 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
     but strongly prefers learning in real time with other people.
 
 ## Syllabus
-
-<div class="chapters" markdown="1">
 
 1.  [Introduction](./01_intro/index.md): what we will learn, how to set up, and the data we will use
 1.  [HTML and CSS](./02_htmlcss/index.md)
@@ -68,11 +56,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Sessions](./23_sessions/index.md): persistent sessions and [JWT][jwt]
 1.  [Caching](./24_cache/index.md): speeding things up
 
-</div>
-
 ##  Appendices
-
-<div class="appendices" markdown="1">
 
 1.  [Designing a Workflow](./98_workflow/index.md)
 1.  [Certificates](./99_cert/index.md)
@@ -81,8 +65,6 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Contributing](./CONTRIBUTING.md)
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
-
-</div>
 
 ## Technologies
 
