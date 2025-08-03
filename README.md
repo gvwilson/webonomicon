@@ -31,62 +31,58 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 ## Syllabus
 
-1.  [Introduction](./01_intro/index.md): what we will learn, how to set up, and the data we will use
-1.  [HTML and CSS](./02_htmlcss/index.md)
-1.  [An Hour of JavaScript](./03_js/index.md)
-1.  [JavaScript in the Browser](./04_browser/index.md): using the language in its native habitat
-1.  [HTTP](./05_http/index.md): how browsers and server talk to each other
-1.  [A Server](./06_server/index.md): building a server with [Flask][flask]
-1.  [Using a Database](./07_db/index.md): getting data from [SQLite][sqlite] using [PyPika][pypika]
-1.  [Testing the Server](./08_test/index.md): testing the server with [pytest][pytest]
-1.  [Serving HTML](./09_view/index.md): generating HTML with [Jinja][jinja] templates
-1.  [Using Forms](./10_forms/index.md): sending data to a server
-1.  [Using HTMX](./11_htmx/index.md): letting the [htmx][htmx] library do the hard work
-1.  [Database Migration](./12_migrate/index.md): managing database schema changes
-1.  [Authentication](./13_auth/index.md): checking the user's identity
-1.  [Testing in the Browser](./14_automate/index.md): using [Selenium][selenium] to test the user interface
-1.  [Encryption](./15_crypt/index.md): keeping secrets safe
-1.  [Uploading Files](./16_upload/index.md): multi-step interactions
-1.  [Logging and Auditing](./17_log/index.md): keeping of track of what's happened
-1.  [Permissions](./18_perm/index.md): representing and checking who can do what
-1.  [Accessibility](./19_access/index.md): because everyone should be comfortable
-1.  [A Graphical User Interface](./20_gui/index.md): handling interactivity in the browser
-1.  [Dynamic Graphics](./21_graphics/index.md): drawing pictures with [SVG.js][svgjs]
-1.  [Internationalization](./22_intl/index.md): because everyone should be welcome
-1.  [Sessions](./23_sessions/index.md): persistent sessions and [JWT][jwt]
-1.  [Caching](./24_cache/index.md): speeding things up
+<div id="syllabus" markdown="1">
+
+1.  [Introduction](./01_intro/): what we will learn, how to set up, and the data we will use
+1.  [HTML and CSS](./02_htmlcss/)
+1.  [An Hour of JavaScript](./03_js/)
+1.  [JavaScript in the Browser](./04_browser/): using the language in its native habitat
+1.  [HTTP](./05_http/): how browsers and server talk to each other
+1.  [A Server](./06_server/): building a server with [Flask][flask]
+1.  [Using a Database](./07_db/): getting data from [SQLite][sqlite] using [PyPika][pypika]
+1.  [Testing the Server](./08_test/): testing the server with [pytest][pytest]
+1.  [Serving HTML](./09_view/): generating HTML with [Jinja][jinja] templates
+1.  [Using Forms](./10_forms/): sending data to a server
+1.  [Using HTMX](./11_htmx/): letting the [htmx][htmx] library do the hard work
+1.  [Database Migration](./12_migrate/): managing database schema changes
+1.  [Authentication](./13_auth/): checking the user's identity
+1.  [Testing in the Browser](./14_automate/): using [Selenium][selenium] to test the user interface
+1.  [Encryption](./15_crypt/): keeping secrets safe
+1.  [Uploading Files](./16_upload/): multi-step interactions
+1.  [Logging and Auditing](./17_log/): keeping of track of what's happened
+1.  [Permissions](./18_perm/): representing and checking who can do what
+1.  [Accessibility](./19_access/): because everyone should be comfortable
+1.  [A Graphical User Interface](./20_gui/): handling interactivity in the browser
+1.  [Dynamic Graphics](./21_graphics/): drawing pictures with [SVG.js][svgjs]
+1.  [Internationalization](./22_intl/): because everyone should be welcome
+1.  [Sessions](./23_sessions/): persistent sessions and [JWT][jwt]
+1.  [Caching](./24_cache/): speeding things up
+
+</div>
 
 ##  Appendices
 
-1.  [Designing a Workflow](./98_workflow/index.md)
-1.  [Certificates](./99_cert/index.md)
+<div id="appendices" markdown="1">
+
+1.  [Designing a Workflow](./98_workflow/)
+1.  [Certificates](./99_cert/)
 1.  [License](./LICENSE.md)
 1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
 1.  [Contributing](./CONTRIBUTING.md)
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
 
-## Technologies
+</div>
 
-| Package                          | Purpose           |
-| -------------------------------- | ----------------- |
-| [Alpine.js][alpine]              | dynamic HTML      |
-| [Beautiful Soup][bs4]            | HTML manipulation |
-| [deno][deno]                     | JavaScript        |
-| [FastHTML][fasthtml]             | web framework     |
-| [Flask][flask]                   | web server        |
-| [Frappe Charts][frappe-charts]   | charts            |
-| [html5validator][html5validator] | validation        |
-| [htmx][htmx]                     | interaction       |
-| [httpx][httpx]                   | HTTP              |
-| [Jinja2][jinja]                  | HTML templating   |
-| [Polars][polars]                 | tabular data      |
-| [PrettyTable][prettytable]       | formatting        |
-| [PyPika][pypika]                 | query builder     |
-| [pytest][pytest]                 | testing           |
-| [Selenium][selenium]             | testing           |
-| [SQLite][sqlite]                 | database          |
-| [SVG.js][svgjs]                  | graphics          |
+<p class="center">
+  <em>
+    Start where you are
+    <br/>
+    Use what you have
+    <br/>
+    Help who you can
+  </em>
+</p>
 
 [alpine]: https://alpinejs.dev/
 [bs4]: https://beautiful-soup-4.readthedocs.io/
