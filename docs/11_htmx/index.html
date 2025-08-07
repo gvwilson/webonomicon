@@ -45,12 +45,13 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
@@ -61,10 +62,10 @@
 <img alt="concept map of HTMX" src="htmx_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary/#spread-arguments">spread arguments</a></p>
+<p id="terms"></p>
 <h2>Outline</h2>
 <ul>
-<li>Go back to the models, views, and server from <a href="../09_view/index.md">Serving HTML</a><ul>
+<li>Go back to the models, views, and server from <a href="../09_view/">Serving HTML</a><ul>
 <li>Strip out row and column views</li>
 <li>Add a button for each row</li>
 <li>Styling is ugly, so add a handler for static files in <a href="./server.py"><code>server.py</code></a> as well</li>
@@ -81,7 +82,7 @@
 </li>
 <li>[htmx][htmx] searches document for properties starting <code>hx-</code> and adds appropriate callbacks</li>
 </ul>
-<pre><code>&lt;button hx-get="/exp/{row.staff_id}" hx-trigger="click" hx-target="#experiments" hx-swap="innerHTML"&gt;
+<pre class=""><code>&lt;button hx-get="/exp/{row.staff_id}" hx-trigger="click" hx-target="#experiments" hx-swap="innerHTML"&gt;
   x
 &lt;/button&gt;
 </code></pre>

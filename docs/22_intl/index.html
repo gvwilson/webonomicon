@@ -45,18 +45,19 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
 <main>
 <h1>Internationalization</h1>
-<p id="terms">Terms defined: <a href="../glossary/#i18n">Internationalization (i18n)</a>, <a href="../glossary/#l10n">Localization (l10n)</a></p>
+<p id="terms"></p>
 <ul>
 <li><a href="../glossary/#i18n">Internationalization</a> (often abbreviated "i18n" because of the number of letters)
     is the preparation of software for multilingual support</li>
@@ -75,8 +76,8 @@
 <li><a href="./views.py"><code>views.py</code></a> uses the request's <code>accept_languages</code> property to look up the user's desired language code</li>
 <li><a href="./server.py"><code>server.py</code></a> passes <code>request.accept_languages</code> to view functions</li>
 <li><a href="./request_lang.py"><code>request_lang.py</code></a> gets a resource with an explicit <code>Accept-Language</code> header<ul>
-<li>Can/should use unit tests from <a href="../08_test/index.md">Testing the Server</a>
-    and <a href="../14_automate/index.md">Testing in the Browser</a></li>
+<li>Can/should use unit tests from <a href="../08_test/">Testing the Server</a>
+    and <a href="../14_automate/">Testing in the Browser</a></li>
 </ul>
 </li>
 </ul>

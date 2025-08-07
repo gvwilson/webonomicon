@@ -45,12 +45,13 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
@@ -61,7 +62,7 @@
 <img alt="concept map of HTML and CSS" src="htmlcss_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary/#attribute">attribute</a>, <a href="../glossary/#css">Cascading Style Sheets (CSS)</a>, <a href="../glossary/#css-class">CSS class</a>, <a href="../glossary/#css-variable">CSS variable</a>, <a href="../glossary/#element">element (in HTML)</a>, <a href="../glossary/#escape-sequence">escape sequence</a>, <a href="../glossary/#external-style-sheet">external style sheet</a>, <a href="../glossary/#html">HyperText Markup Language (HTML)</a>, <a href="../glossary/#pseudo-element">pseudo-element</a>, <a href="../glossary/#root-element">root element</a>, <a href="../glossary/#tag">tag</a></p>
+<p id="terms"></p>
 <h2>Introduction</h2>
 <ul>
 <li><a href="../glossary/#html">HyperText Markup Language</a> (HTML) is the standard way to represent documents on the web</li>
@@ -104,7 +105,7 @@
 <ul>
 <li>Customize elements with <code>name="value"</code> <a href="../glossary/#attribute">attributes</a></li>
 </ul>
-<pre><code>&lt;h1 align="center"&gt;A Centered Heading&lt;/h1&gt;
+<pre class=""><code>&lt;h1 align="center"&gt;A Centered Heading&lt;/h1&gt;
 </code></pre>
 <ul>
 <li>Use <code>href</code> attribute of <code>a</code> element to link to:<ul>
@@ -127,7 +128,7 @@
 </ul>
 </li>
 </ul>
-<pre><code>&lt;meta charset="utf-8"&gt;
+<pre class=""><code>&lt;meta charset="utf-8"&gt;
 </code></pre>
 <ul>
 <li>HTML Entities vs. Direct Unicode Characters:<ul>
@@ -136,7 +137,7 @@
 </ul>
 </li>
 </ul>
-<pre><code>&lt;p&gt;&amp;copy; 2024&lt;/p&gt;
+<pre class=""><code>&lt;p&gt;&amp;copy; 2024&lt;/p&gt;
 &lt;!-- is equivalent to --&gt;
 &lt;p&gt;© 2024&lt;/p&gt;
 </code></pre>
@@ -157,7 +158,7 @@
 </li>
 <li>Can define <a href="../glossary/#css-variable">CSS variables</a> or style things directly</li>
 </ul>
-<pre class="language-css"><code class="language-css" data-file="styled_page.css">:root {
+<pre class=""><code data-file="styled_page.css">:root {
     --extra-space: 5px;
     --page-width: 40em;
 }

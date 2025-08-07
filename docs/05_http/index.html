@@ -45,12 +45,13 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
@@ -61,7 +62,7 @@
 <img alt="concept map of HTTP" src="http_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary/#client">client</a>, <a href="../glossary/#dns">Domain Name System (DNS)</a>, <a href="../glossary/#http-request">HTTP request</a>, <a href="../glossary/#http-response">HTTP response</a>, <a href="../glossary/#http">HyperText Transfer Protocol (HTTP)</a>, <a href="../glossary/#ip">Internet Protocol</a>, <a href="../glossary/#ip-address">IP address</a>, <a href="../glossary/#port">port</a>, <a href="../glossary/#server">server</a>, <a href="../glossary/#socket">socket</a>, <a href="../glossary/#tcp">Transmission Control Protocol</a></p>
+<p id="terms"></p>
 <h2>Outline</h2>
 <ul>
 <li>Typical web application has clients and servers<ul>
@@ -92,7 +93,7 @@
 <li><code>TCPServer</code> creates a new handler each time it gets a connection and calls that object's <code>handle</code> method</li>
 <li><a href="./simple_server.py"><code>simple_server.py</code></a> reads up to 1024 bytes of data and returns a message</li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="simple_server.py">"""Basic socket server."""
+<pre class=""><code data-file="simple_server.py">"""Basic socket server."""
 
 import socketserver
 
@@ -118,7 +119,7 @@ if __name__ == "__main__":
 <ul>
 <li>Use [netcat][netcat] to open a connection and send some text with <a href="./send_with_nc.sh"><code>send_with_nc.sh</code></a></li>
 </ul>
-<pre class="language-sh"><code class="language-sh" data-file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
+<pre class=""><code data-file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
 </code></pre>
 <h3>HTTP Request and Response</h3>
 <ul>
@@ -135,7 +136,7 @@ if __name__ == "__main__":
 </li>
 <li><a href="./http_request_headers.txt"><code>http_request_headers.txt</code></a> shows more realistic request</li>
 </ul>
-<pre class="language-txt"><code class="language-txt" data-file="http_request_headers.txt">GET /index.html HTTP/1.1
+<pre class=""><code data-file="http_request_headers.txt">GET /index.html HTTP/1.1
 Accept: text/html
 Accept-Language: en, fr
 If-Modified-Since: 16-May-2024
@@ -143,7 +144,7 @@ If-Modified-Since: 16-May-2024
 <ul>
 <li><a href="./http_response.txt"><code>http_response.txt</code></a> shows possible response</li>
 </ul>
-<pre class="language-txt"><code class="language-txt" data-file="http_response.txt">HTTP/1.1 200 OK
+<pre class=""><code data-file="http_response.txt">HTTP/1.1 200 OK
 Date: Thu, 16 June 2023 12:28:53 GMT
 Content-Type: text/html
 Content-Length: 53
@@ -157,7 +158,7 @@ Content-Length: 53
 <ul>
 <li><a href="./http_server.py"><code>http_server.py</code></a> responds to <code>GET</code> with same page every time.</li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="http_server.py">from http.server import BaseHTTPRequestHandler, HTTPServer
+<pre class=""><code data-file="http_server.py">from http.server import BaseHTTPRequestHandler, HTTPServer
 
 PAGE = """&lt;html&gt;&lt;body&gt;&lt;p&gt;path: {path}&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"""
 

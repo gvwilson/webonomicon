@@ -45,12 +45,13 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
@@ -61,12 +62,12 @@
 <img alt="concept map of Flask server" src="server_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary/#dataframe">dataframe</a>, <a href="../glossary/#env-var">environment variable</a>, <a href="../glossary/#query-parameter">query parameter</a>, <a href="../glossary/#route">route (in server)</a>, <a href="../glossary/#url-fragment">URL fragment</a></p>
+<p id="terms"></p>
 <h2>Outline</h2>
 <ul>
 <li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML</li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="server_hello.py">"""Hello server."""
+<pre class=""><code data-file="server_hello.py">"""Hello server."""
 
 from flask import Flask
 
@@ -92,7 +93,7 @@ def root():
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="fetch.py">"""Fetch HTML from URL and display."""
+<pre class=""><code data-file="fetch.py">"""Fetch HTML from URL and display."""
 
 import argparse
 import httpx
@@ -131,7 +132,7 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="server_func.py:keep">def create_app():
+<pre class=""><code data-file="server_func.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("func")
     CORS(app)
@@ -151,7 +152,7 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="server_routes.py:keep">def create_app():
+<pre class=""><code data-file="server_routes.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("routes")
     CORS(app)
@@ -185,7 +186,7 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="server_err.py:keep">def create_app():
+<pre class=""><code data-file="server_err.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("err")
     CORS(app)

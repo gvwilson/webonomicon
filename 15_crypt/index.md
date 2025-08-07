@@ -29,4 +29,4 @@
 -   Still insecure
     -   We are getting their password over an unencrypted channel
     -   The cookie is being passed back and forth over the same channel
-    -   Look at certificates in [an appendix](../99_cert/index.md)
+    -   Look at certificates in [an appendix](../99_cert/)

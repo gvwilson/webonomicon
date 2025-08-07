@@ -45,12 +45,13 @@
       <span class="dropdown">
 <a href="#">Extras</a>
 <span class="dropdown-content">
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
+<a href="../license/">License</a>
+<a href="../conduct/">Code of Conduct</a>
+<a href="../contrib/">Contributing</a>
+<a href="../bibliography/">Bibliography</a>
+<a href="../glossary/">Glossary</a>
 </span>
 </span>
 </nav>
@@ -61,7 +62,7 @@
 <img alt="concept map of database interaction in Python" src="db_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary/#db-schema">database schema</a>, <a href="../glossary/#factory-function">factory function</a>, <a href="../glossary/#multithreading">multithreading</a>, <a href="../glossary/#orm">object-relational mapper (ORM)</a>, <a href="../glossary/#query-builder">query builder</a></p>
+<p id="terms"></p>
 <h2>Outline</h2>
 <h3>Direct SQL</h3>
 <ul>
@@ -77,7 +78,7 @@
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="models_sql.py">"""Get data from database."""
+<pre class=""><code data-file="models_sql.py">"""Get data from database."""
 
 import os
 import sqlite3
@@ -170,7 +171,7 @@ def row(staff_id):
 <li>Use the [PyPika][pypika] <a href="../glossary/#query-builder">query builder</a></li>
 <li><a href="./pika_demo.py"><code>pika_demo.py</code></a> is a proof of concept</li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="pika_demo.py">from pypika import Query, Table
+<pre class=""><code data-file="pika_demo.py">from pypika import Query, Table
 import sqlite3
 import sys
 
@@ -189,7 +190,7 @@ for row in cursor.fetchall():
 <ul>
 <li><a href="./models_pika.py"><code>models_pika.py</code></a> is shorter and more readable than the SQL version</li>
 </ul>
-<pre class="language-py"><code class="language-py" data-file="models_pika.py">"""Get data from database."""
+<pre class=""><code data-file="models_pika.py">"""Get data from database."""
 
 import os
 from pypika import Query, Table

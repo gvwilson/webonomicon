@@ -68,18 +68,19 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Certificates](./99_cert/)
 1.  [License](./LICENSE.md)
 1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
-1.  [Bibliography](./bibliography.md)
-1.  [Glossary](./glossary.md)
+1.  [Contributing](./CONTRIBUTING.md)
+1.  [Bibliography](./bibliography/)
+1.  [Glossary](./glossary/)
 
 </div>
 
 <p class="center">
   <em>
-    Start where you are
-    <br/>
-    Use what you have
-    <br/>
-    Help who you can
+    start where you are
+    &middot;
+    use what you have
+    &middot;
+    help who you can
   </em>
 </p>
 

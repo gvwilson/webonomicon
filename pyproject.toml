@@ -29,11 +29,12 @@ dependencies = [
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
 
 [tool.mccole]
-skips = ["CONTRIBUTING.md", "templates", "unused"]
+skips = ["common.mk", "templates", "unused", "uv.lock"]
 
 [tool.mccole.renames]
 "README.md" = ""
 "CODE_OF_CONDUCT.md" = "conduct"
+"CONTRIBUTING.md" = "contrib"
 "LICENSE.md" = "license"
 "bibliography.md" = "bibliography"
 "glossary.md" = "glossary"
