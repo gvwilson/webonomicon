@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -14,7 +14,7 @@
       ·
       <span class="dropdown">
 <a href="#">Lessons</a>
-<span class="dropdown-content">
+<span class="dropdown-content" id="nav-lessons">
 <a href="../01_intro/">Introduction</a>
 <a href="../02_htmlcss/">HTML and CSS</a>
 <a href="../03_js/">An Hour of JavaScript</a>
@@ -44,7 +44,7 @@
       ·
       <span class="dropdown">
 <a href="#">Extras</a>
-<span class="dropdown-content">
+<span class="dropdown-content" id="nav-extras">
 <a href="../98_workflow/">Designing a Workflow</a>
 <a href="../99_cert/">Certificates</a>
 <a href="../license/">License</a>
@@ -57,7 +57,7 @@
 </nav>
 <main>
 <h1>Logging and Auditing</h1>
-<p id="terms"></p>
+
 <ul>
 <li>Add structured logging using [<code>structlog</code>][structlog]</li>
 <li>Old-fashioned logging generates human-readable text:</li>
