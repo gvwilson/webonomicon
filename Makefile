@@ -19,9 +19,7 @@ datasets:
 ## lint: check code and project
 lint:
 	@ruff check --exclude docs .
-	@mccole lint
-	@html5validator --root docs --blacklist templates --ignore ${HTML_IGNORES} \
-	&& echo "HTML checks passed."
+	@mccole lint --html
 
 ## profile: render with profiling
 profile:
