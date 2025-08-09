@@ -1,5 +1,7 @@
 # Serving HTML
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="view-concept-map">

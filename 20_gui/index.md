@@ -1,5 +1,7 @@
 # A Graphical User Interface
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="gui-concept-map">

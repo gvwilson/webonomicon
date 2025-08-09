@@ -1,5 +1,7 @@
 # A Server
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="server-concept-map">

@@ -1,5 +1,7 @@
 # Database Migration
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="migrate-concept-map">

@@ -1,5 +1,7 @@
 # Using HTMX
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="htmx-concept-map">

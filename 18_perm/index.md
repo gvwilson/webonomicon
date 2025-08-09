@@ -1,5 +1,7 @@
 # Permissions
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="perm-concept-map">

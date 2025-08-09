@@ -1,5 +1,7 @@
 # Dynamic Graphics {: .fixme}
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="graphics-concept-map">

@@ -1,5 +1,7 @@
 # Using a Database
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="db-concept-map">

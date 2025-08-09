@@ -1,5 +1,7 @@
 # HTML and CSS
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="htmlcss-concept-map">

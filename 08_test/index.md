@@ -1,5 +1,7 @@
 # Testing the Server
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="test-concept-map">

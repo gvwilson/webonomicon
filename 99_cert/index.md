@@ -1,5 +1,7 @@
 # Certificates {: .fixme}
 
+<p id="terms"></p>
+
 Run `RERUN.sh` to:
 
 1.  Create CA key and cert

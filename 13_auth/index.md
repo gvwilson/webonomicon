@@ -1,5 +1,7 @@
 # Authentication
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="auth-concept-map">

@@ -1,5 +1,7 @@
 # Sessions
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="sessions-concept-map">

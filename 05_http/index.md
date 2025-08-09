@@ -1,5 +1,7 @@
 # HTTP
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="http-concept-map">

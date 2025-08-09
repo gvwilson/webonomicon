@@ -1,5 +1,7 @@
 # An Hour of JavaScript
 
+<p id="terms"></p>
+
 > JavaScript is the only language that I'm aware of
 > that people feel they don't need to learn
 > before they start using it.

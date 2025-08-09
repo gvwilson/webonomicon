@@ -1,5 +1,7 @@
 # Uploading Files
 
+<p id="terms"></p>
+
 ## Outline
 
 -   Show how to upload files using [htmx][htmx]

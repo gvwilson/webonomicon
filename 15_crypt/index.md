@@ -1,5 +1,7 @@
 # Encryption
 
+<p id="terms"></p>
+
 ## Overview
 
 <figure id="crypt-concept-map">
