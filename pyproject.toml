@@ -29,7 +29,23 @@ dependencies = [
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
 
 [tool.mccole]
-skips = ["common.mk", "templates", "unused", "uv.lock"]
+skips = [
+    "99_cert/CA.*",
+    "99_cert/server.*",
+    "*.csv",
+    "*.html",
+    "*.js",
+    "*.json",
+    "*.mk",
+    "*.py",
+    "*.sh",
+    "*.sql",
+    "*.tbl",
+    "*.text",
+    "*.txt",
+    "unused/**",
+    "uv.lock"
+]
 
 [tool.mccole.renames]
 "README.md" = ""
