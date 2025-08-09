@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Outline
 
 -   A [database migration](g:db-migration) is a change to the structure of a database

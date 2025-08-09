@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Outline
 
 -   [Automate the browser](g:browser-automation) with [Selenium][selenium]

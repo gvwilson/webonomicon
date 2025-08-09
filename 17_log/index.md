@@ -1,7 +1,5 @@
 # Logging and Auditing
 
-<p id="terms"></p>
-
 -   Add structured logging using [`structlog`][structlog]
 -   Old-fashioned logging generates human-readable text:
 

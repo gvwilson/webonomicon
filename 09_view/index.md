@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Outline
 
 -   Introduce the view part of MVC and use [Jinja][jinja] templates

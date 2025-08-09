@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Outline
 
 -   Typical web application has clients and servers

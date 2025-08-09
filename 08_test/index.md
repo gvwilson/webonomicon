@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Outline
 
 -   Add a [heartbeat](g:heartbeat) to [`server.py`](./server.py)

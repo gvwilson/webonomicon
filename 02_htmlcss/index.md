@@ -7,8 +7,6 @@
   <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
-<p id="terms"></p>
-
 ## Introduction
 
 -   [HyperText Markup Language](g:html) (HTML) is the standard way to represent documents on the web

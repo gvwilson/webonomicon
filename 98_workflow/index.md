@@ -1,7 +1,5 @@
 # Designing a Workflow {: .fixme}
 
-<p id="terms"></p>
-
 ## Examples
 
 -   X is conducting a survey

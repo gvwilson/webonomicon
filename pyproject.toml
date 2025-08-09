@@ -32,9 +32,9 @@ dependencies = [
 skips = [
     "99_cert/CA.*",
     "99_cert/server.*",
+    "*_*/*.js",
     "*.csv",
     "*.html",
-    "*.js",
     "*.json",
     "*.mk",
     "*.py",
