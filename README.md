@@ -9,10 +9,14 @@ All of the material is available under [open licenses](./LICENSE.md),
 and contributions through our GitHub repository are welcome.
 All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
-> **Please note:** this tutorial is still being outlined.
-> Most sections will have additional examples (and much more explanation)
-> before learners encounter it.
-> Suggestions and help are greatly appreciated.
+<div class="callout" markdown="1">
+
+This tutorial is still being outlined.
+Most sections will have additional examples (and much more explanation)
+before learners encounter it.
+Suggestions and help are greatly appreciated.
+
+</div>
 
 ## Learner Persona
 
