@@ -20,7 +20,3 @@
     CRC Press/Taylor and Francis,
     2024,
     978-1032725215.
-
-[js4ds]: https://third-bit.com/js4ds/
-[sdxjs]: https://third-bit.com/sdxjs/
-[sdxpy]: https://third-bit.com/sdxpy/

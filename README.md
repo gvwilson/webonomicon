@@ -20,17 +20,17 @@ Suggestions and help are greatly appreciated.
 
 ## Learner Persona
 
--   Sabina, 28, has a master's degree in animal physiology
+-   Harper, 28, has a master's degree in animal physiology
     and now works for a mid-sized veterinary pharmaceutical company.
 -   She learned a bit of R in an undergraduate biostatistics course,
     then picked up Python in grad school.
     She spends several hours a week analyzing data with Pandas
     and visualizing it with Plotly Express,
     and is comfortable with basic Git commands.
--   Sabina recently became responsible for maintaining a dashboard application built with Dash.
+-   Harper recently became responsible for maintaining a dashboard application built with Dash.
     She believes a better understanding of how web applications work in general
     will help her debug and extend it.
--   Sabina has tried doing asynchronous online courses a couple of times,
+-   Harper has tried doing asynchronous online courses a couple of times,
     but strongly prefers learning in real time with other people.
 
 ## Syllabus

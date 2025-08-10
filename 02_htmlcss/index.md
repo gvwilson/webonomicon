@@ -54,7 +54,7 @@
 
 ## UTF-8 Encoding
 
--   UTF-8 encoding (Simplified):
+-   UTF-8 encoding (simplified):
     -   Think of UTF-8 as a universal language for computers to understand and display text
     -   It can handle almost any character from any language in the world, including emojis
     -   When you use UTF-8, you don't have to worry about your text looking weird on different devices or websites

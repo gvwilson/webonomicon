@@ -9,7 +9,7 @@
 :   FIXME
 
 `async` (keyword in JavaScript)
-:   See [JavaScript `async` keyword](g:js-async)
+:   See [JavaScript `async` keyword](#js-async)
 
 <span id="async-operation">asynchronous operation</span>
 :   FIXME
@@ -21,7 +21,7 @@
 :   FIXME
 
 `await` (keyword in JavaScript)
-:   See [JavaScript `await` keyword](g:js-await)
+:   See [JavaScript `await` keyword](#js-await)
 
 ## B
 
@@ -205,7 +205,7 @@
 :   FIXME
 
 <span id="raster-graphics">raster graphics</span>
-:   FIXME see also [vector graphics](g:vector-graphics)
+:   FIXME see also [vector graphics](#vector-graphics)
 
 <span id="rgb">red-green-blue (RGB) color</span>
 :   FIXME
@@ -270,7 +270,7 @@
 ## V
 
 <span id="vector-graphics">vector graphics</span>
-:   FIXME see also [raster graphics](g:raster-graphics)
+:   FIXME see also [raster graphics](#raster-graphics)
 
 <span id="virtual-env">virtual environment</span>
 :   FIXME
@@ -285,5 +285,3 @@
 ## Y
 
 ## Z
-
-[flexbox]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout

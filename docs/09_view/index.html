@@ -65,8 +65,8 @@
 </figure>
 <h2>Outline</h2>
 <ul>
-<li>Introduce the view part of MVC and use [Jinja][jinja] templates<ul>
-<li>Alternative [htpy][htpy] is more amenable to debugging but harder to read</li>
+<li>Introduce the view part of MVC and use <a href="https://jinja.palletsprojects.com/">Jinja</a> templates<ul>
+<li>Alternative <a href="https://htpy.dev/">htpy</a> is more amenable to debugging but harder to read</li>
 </ul>
 </li>
 <li>Add exceptions to <a href="./util.py"><code>util.py</code></a><ul>
@@ -84,7 +84,7 @@
 <li>Most servers will not load things whose paths start with <code>../</code> for security reasons</li>
 <li>Run <a href="./server_paths.py"><code>server_paths.py</code></a> and go to <code>/dotdot</code> to see the effect</li>
 <li>So assets need to be in directories below the server's root directory</li>
-<li>But <code>../static/image.png</code> works because [Flask][flask] removes the leading <code>../</code></li>
+<li>But <code>../static/image.png</code> works because <a href="https://flask.palletsprojects.com/">Flask</a> removes the leading <code>../</code></li>
 </ul>
 </li>
 <li>The right way to do this is to configure a directory for <a href="../glossary/#static-file">static files</a><ul>

@@ -14,9 +14,9 @@
 -   Never store passwords as [plaintext](g:plaintext)
 -   Create a migration to encrypt them and save [ciphertext](g:ciphertext)
     -   Generate a [secret](g:secret) in [`generate_encryption.py`](./generate_encryption.py)
-    -   `make_secret` in [`util.py`](./util.py) uses Python's [secrets][secrets] module
+    -   `make_secret` in [`util.py`](./util.py) uses Python's [secrets][py-secrets] module
     -   Save in a file that never goes in version control (or anywhere else)
-    -   Then encrypt passwords using `blake2b` from [hashlib][hashlib]
+    -   Then encrypt passwords using `blake2b` from [hashlib][py-hashlib]
 -   [Hash](g:hashing) the combination of the secret and their password
     -   The secret is a [salt](g:salt)
 -   When someone logs in:

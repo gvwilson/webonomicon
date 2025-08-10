@@ -14,6 +14,7 @@
 -   [SVG](g:svg) is a widely-used [vector graphics](g:vector-graphics) format
     -   Represent lines, circles, etc. in a notation like HTML
     -   Also represent transformations (move, rescale, etc.)
+    -   Scales more smoothly than [raster graphics](g:raster-graphics) like PNG and JPEG
 -   [`shapes.html`](./shapes.html) and [`shapes.js`](./shapes.js)
     -   Create an SVG object and insert into the page
     -   Ask that object to create other shapes

@@ -88,7 +88,7 @@ def root():
     return HELLO
 </code></pre>
 <ul>
-<li>Go to http://127.0.0.1:5000 to view (5000 being [Flask][flask]'s default port)<ul>
+<li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)<ul>
 <li>Or use <a href="./fetch.py"><code>fetch.py</code></a> to fetch and display data</li>
 </ul>
 </li>
@@ -128,7 +128,7 @@ if __name__ == "__main__":
 <ul>
 <li><a href="./server_func.py"><code>server_func.py</code></a> creates the application and configures <a href="../glossary/#route">routes</a> in a function<ul>
 <li>Get path to staff CSV from <code>DATA</code> <a href="../glossary/#env-var">environment variable</a></li>
-<li>Read and convert to HTML with [PrettyTable][prettytable]</li>
+<li>Read and convert to HTML with <a href="https://pypi.org/project/prettytable/">PrettyTable</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +148,7 @@ if __name__ == "__main__":
 <li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
 <li>Use <a href="../glossary/#query-parameter">query parameters</a> or <a href="../glossary/#url-fragment">URL fragments</a>
     to select individual row or column</li>
-<li>Use [Polars][polars] to get a <a href="../glossary/#dataframe">dataframe</a> and [Flask][flask] to convert to JSON</li>
+<li>Use <a href="https://pola.rs/">Polars</a> to get a <a href="../glossary/#dataframe">dataframe</a> and <a href="https://flask.palletsprojects.com/">Flask</a> to convert to JSON</li>
 </ul>
 </li>
 </ul>
@@ -182,7 +182,7 @@ if __name__ == "__main__":
 </li>
 <li><a href="./server_err.py"><code>server_err.py</code></a> handles errors<ul>
 <li>Check row and column and raise exception if not there</li>
-<li>Rely on [Flask][flask] to handle nonexistent routes</li>
+<li>Rely on <a href="https://flask.palletsprojects.com/">Flask</a> to handle nonexistent routes</li>
 </ul>
 </li>
 </ul>

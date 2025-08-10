@@ -66,10 +66,10 @@
 <h2>Outline</h2>
 <ul>
 <li>Add a <a href="../glossary/#heartbeat">heartbeat</a> to <a href="./server.py"><code>server.py</code></a></li>
-<li>Wrap the [Flask][flask] application with a <a href="../glossary/#test-client">test client</a>
-    that provides an interface like [httpx][httpx]</li>
+<li>Wrap the <a href="https://flask.palletsprojects.com/">Flask</a> application with a <a href="../glossary/#test-client">test client</a>
+    that provides an interface like <a href="https://www.python-httpx.org/">httpx</a></li>
 <li>Run <code>pytest test_heartbeat.py</code> to run tests in <a href="./test_heartbeat.py"><code>test_heartbeat.py</code></a></li>
-<li>Rewrite using [pytest][pytest] <a href="../glossary/#fixture">fixtures</a> in <a href="./test_fixtures.py"><code>test_fixtures.py</code></a><ul>
+<li>Rewrite using <a href="https://docs.pytest.org/">pytest</a> <a href="../glossary/#fixture">fixtures</a> in <a href="./test_fixtures.py"><code>test_fixtures.py</code></a><ul>
 <li>Don't duplicate the expected value, since it might change</li>
 </ul>
 </li>

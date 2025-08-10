@@ -57,7 +57,7 @@
 </nav>
 <main>
 <h1 class="fixme">Dynamic Graphics</h1>
-<p id="terms">Terms defined: <a href="svg">Scalable Vector Graphics (SVG)</a>, <a href="vector-graphics">vector graphics</a></p>
+<p id="terms">Terms defined: <a href="svg">Scalable Vector Graphics (SVG)</a>, <a href="raster-graphics">raster graphics</a>, <a href="vector-graphics">vector graphics</a></p>
 <h2>Overview</h2>
 <figure id="graphics-concept-map">
 <img alt="concept map of graphics and charts in browser" src="graphics_concept_map.svg"/>
@@ -68,6 +68,7 @@
 <li><a href="../glossary/#svg">SVG</a> is a widely-used <a href="../glossary/#vector-graphics">vector graphics</a> format<ul>
 <li>Represent lines, circles, etc. in a notation like HTML</li>
 <li>Also represent transformations (move, rescale, etc.)</li>
+<li>Scales more smoothly than <a href="../glossary/#raster-graphics">raster graphics</a> like PNG and JPEG</li>
 </ul>
 </li>
 <li><a href="./shapes.html"><code>shapes.html</code></a> and <a href="./shapes.js"><code>shapes.js</code></a><ul>
@@ -84,8 +85,8 @@
 <li>A lot of calculations, many of which would have to be re-done if the X-axis labels weren't rotated</li>
 </ul>
 </li>
-<li>Use [Frappe Charts][frappe-charts]<ul>
-<li>Not as popular as [Chart.js][chart-js], but it uses SVG</li>
+<li>Use <a href="https://frappe.io/charts/docs">Frappe Charts</a><ul>
+<li>Not as popular as <a href="https://www.chartjs.org/">Chart.js</a>, but it uses SVG</li>
 </ul>
 </li>
 </ul>

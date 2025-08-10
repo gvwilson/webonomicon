@@ -72,7 +72,7 @@
 </ul>
 </li>
 <li>Add an empty <code>div</code> with ID <code>experiments</code></li>
-<li>Add <code>htmx.js</code> to head of page to use [htmx][htmx]</li>
+<li>Add <code>htmx.js</code> to head of page to use <a href="https://htmx.org/">htmx</a></li>
 <li>Modify buttons to use it<ul>
 <li><code>hx-get</code>: get from URL</li>
 <li><code>hx-trigger</code>: event that triggers action</li>
@@ -80,7 +80,7 @@
 <li><code>hx-swap</code>: replace inner HTML (as opposed to the entire element with <code>outerHTML</code>)</li>
 </ul>
 </li>
-<li>[htmx][htmx] searches document for properties starting <code>hx-</code> and adds appropriate callbacks</li>
+<li><a href="https://htmx.org/">htmx</a> searches document for properties starting <code>hx-</code> and adds appropriate callbacks</li>
 </ul>
 <pre class=""><code>&lt;button hx-get="/exp/{row.staff_id}" hx-trigger="click" hx-target="#experiments" hx-swap="innerHTML"&gt;
   x

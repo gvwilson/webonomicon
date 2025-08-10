@@ -8,7 +8,7 @@ HTML_IGNORES = 'Attribute "x-' 'Attribute "@click' 'Attribute "file"'
 
 ## build: build HTML
 build:
-	mccole build
+	mccole build --links extras/links.txt
 	@touch docs/.nojekyll
 
 ## datasets: re-create snailz parameters and datasets

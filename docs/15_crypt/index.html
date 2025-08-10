@@ -68,9 +68,9 @@
 <li>Never store passwords as <a href="../glossary/#plaintext">plaintext</a></li>
 <li>Create a migration to encrypt them and save <a href="../glossary/#ciphertext">ciphertext</a><ul>
 <li>Generate a <a href="../glossary/#secret">secret</a> in <a href="./generate_encryption.py"><code>generate_encryption.py</code></a></li>
-<li><code>make_secret</code> in <a href="./util.py"><code>util.py</code></a> uses Python's [secrets][secrets] module</li>
+<li><code>make_secret</code> in <a href="./util.py"><code>util.py</code></a> uses Python's <a href="https://docs.python.org/3/library/secrets.html">secrets</a> module</li>
 <li>Save in a file that never goes in version control (or anywhere else)</li>
-<li>Then encrypt passwords using <code>blake2b</code> from [hashlib][hashlib]</li>
+<li>Then encrypt passwords using <code>blake2b</code> from <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a></li>
 </ul>
 </li>
 <li><a href="../glossary/#hashing">Hash</a> the combination of the secret and their password<ul>

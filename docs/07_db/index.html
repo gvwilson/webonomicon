@@ -66,14 +66,14 @@
 <h2>Outline</h2>
 <h3>Direct SQL</h3>
 <ul>
-<li>Use [SQLite][sqlite] database in <code>./data/lab.db</code> instead of CSV file</li>
+<li>Use <a href="https://www.sqlite.org/">SQLite</a> database in <code>./data/lab.db</code> instead of CSV file</li>
 <li>Install <code>_dict_factory</code> <a href="../glossary/#factory-function">factory function</a>
     to get results as list of dictionaries instead of list of tuples</li>
 <li>And use a flag to convert types like dates and times (used later)</li>
 <li><a href="./models_sql.py"><code>models_sql.py</code></a> implements model part of model-view-controller (MVC)<ul>
 <li>One function for each question we might ask of our data</li>
 <li>Use SQL directly instead of an <a href="../glossary/#orm">object-relational mapper</a>
-    like [SQLAlchemy][SQLAlchemy], [SQLModel][sqlmodel], or [Pony][pony]</li>
+    like <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, <a href="https://sqlmodel.tiangolo.com/">SQLModel</a>, or <a href="https://ponyorm.org/">Pony</a></li>
 <li>ORMs can be hard to debug and don't perfectly insulate programs from changes to <a href="../glossary/#db-schema">schema</a></li>
 </ul>
 </li>
@@ -154,7 +154,7 @@ def row(staff_id):
 </code></pre>
 <ul>
 <li>Re-create connection each time model is accessed<ul>
-<li>Creating it once and attaching to the [Flask][flask] app fails because of <a href="../glossary/#multithreading">multithreading</a></li>
+<li>Creating it once and attaching to the <a href="https://flask.palletsprojects.com/">Flask</a> app fails because of <a href="../glossary/#multithreading">multithreading</a></li>
 </ul>
 </li>
 <li>Catch SQLite exceptions and raise our own so that our server only has to catch one thing</li>
@@ -168,7 +168,7 @@ def row(staff_id):
 </ul>
 </li>
 <li>And embedded SQL isn't actually that easy to read</li>
-<li>Use the [PyPika][pypika] <a href="../glossary/#query-builder">query builder</a></li>
+<li>Use the <a href="https://pypika.readthedocs.io/">PyPika</a> <a href="../glossary/#query-builder">query builder</a></li>
 <li><a href="./pika_demo.py"><code>pika_demo.py</code></a> is a proof of concept</li>
 </ul>
 <pre class=""><code data-file="pika_demo.py">from pypika import Query, Table
