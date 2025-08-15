@@ -78,6 +78,16 @@ Suggestions and help are greatly appreciated.
 
 </div>
 
+## Acknowledgments {: #acknowledgments}
+
+-   [*Juanan Pereira*][pereira-juanan] is a lecturer in Computer Science
+    at the University of the Basque Country (UPV/EHU), where he researches and tries 
+    to integrate open source software, software engineering, and LLMs in education.
+
+-   [*Greg Wilson*][wilson-greg] is a programmer, author, and educator based in Toronto.
+    He was the co-founder and first Executive Director of Software Carpentry
+    and received ACM SIGSOFT's Influential Educator Award in 2020.
+
 <p class="center">
   <em>
     start where you are
@@ -87,3 +97,6 @@ Suggestions and help are greatly appreciated.
     help who you can
   </em>
 </p>
+
+[pereira-juanan]: https://ikasten.io/
+[wilson-greg]: https://third-bit.com/

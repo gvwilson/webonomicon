@@ -81,22 +81,10 @@ Can I add a new section?
 Why is this material free to read?
 :   Because if we all give a little, we all get a lot.
 
-## <a id="contributors">Contributors</a>
-
--   [*Juanan Pereira*][pereira-juanan] is a lecturer in Computer Science
-    at the University of the Basque Country (UPV/EHU), where he researches and tries 
-    to integrate open source software, software engineering, and LLMs in education.
-
--   [*Greg Wilson*][wilson-greg] is a programmer, author, and educator based in Toronto.
-    He was the co-founder and first Executive Director of Software Carpentry
-    and received ACM SIGSOFT's Influential Educator Award in 2020.
-
 [conventional]: https://www.conventionalcommits.org/
 [draw-io]: https://www.drawio.com/
 [email]: mailto:gvwilson@third-bit.com
 [jinja]: https://jinja.palletsprojects.com/
 [mccole]: https://pypi.org/project/mccole/
 [repo]: https://github.com/gvwilson/webonomicon
-[pereira-juanan]: https://ikasten.io/
 [uv]: https://github.com/astral-sh/uv
-[wilson-greg]: https://third-bit.com/
