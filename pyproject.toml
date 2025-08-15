@@ -1,5 +1,6 @@
 [project]
 name = "webonomicon"
+description = "front- and back-end programming for research programmers"
 version = "0.1.29"
 requires-python = ">=3.12"
 dependencies = [
