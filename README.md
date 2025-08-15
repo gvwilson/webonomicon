@@ -88,6 +88,9 @@ Suggestions and help are greatly appreciated.
     He was the co-founder and first Executive Director of Software Carpentry
     and received ACM SIGSOFT's Influential Educator Award in 2020.
 
+-   Grateful to co-authors of [[Gans2020](b:Gans2020)]
+-   And to everyone who gave feedback on [[Wilson2022](b:Wilson2022), [Wilson2024](b:Wilson2024)]
+
 <p class="center">
   <em>
     start where you are
