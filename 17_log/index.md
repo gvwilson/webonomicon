@@ -38,7 +38,7 @@
 -   Specific enhancements
     -   Log all file operations (upload, delete, listing)
     -   Add request metadata (IP address, user agent)
-    -   Include ile metadata (size, content type)
+    -   Include file metadata (size, content type)
     -   Provide detailed error information
     -   Create a log viewer page
 -   Best practices

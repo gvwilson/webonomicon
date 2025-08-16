@@ -31,6 +31,7 @@ dependencies = [
 
 [tool.mccole]
 skips = [
+    "*~",
     "99_cert/CA.*",
     "99_cert/server.*",
     "*_*/*.js",
@@ -44,6 +45,7 @@ skips = [
     "*.tbl",
     "*.text",
     "*.txt",
+    "extras/**",
     "unused/**",
     "uv.lock"
 ]

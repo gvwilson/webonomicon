@@ -17,7 +17,7 @@
 -   Use CSS [flexbox](g:flexbox) layout to create two-column page
 -   [`handwritten.html`](./handwritten.html) creates everything manually
 -   Shared data stored in `x-data` attribute of enclosing `div` (the row)
-    -   `treatments` is available treatments (including emptry string for "none")
+    -   `treatments` is available treatments (including empty string for "none")
     -   `current` is currently-selected treatment
     -   `data` is the plate data keyed by row/column identifier
 -   Selectors are [radio buttons](g:radio-button)
