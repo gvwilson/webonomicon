@@ -1,5 +1,7 @@
 # Runnable tasks.
 
+SLUG=webonomicon
+
 include common.mk
 
 all: commands
@@ -20,6 +22,10 @@ datasets:
 lint:
 	@ruff check --exclude docs .
 	@mccole lint --html
+
+## links: check links in published site
+links:
+	linkchecker -F text https://gvwilson.github.io/${SLUG}/
 
 ## refresh: refresh all file inclusions
 refresh:
