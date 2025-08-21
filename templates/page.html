@@ -14,43 +14,18 @@
       <span class="dropdown">
 	<a href="#">Lessons</a>
 	<span id="nav-lessons" class="dropdown-content">
-          <a href="@/01_intro/">Introduction</a>
-          <a href="@/02_htmlcss/">HTML and CSS</a>
-          <a href="@/03_js/">An Hour of JavaScript</a>
-          <a href="@/04_browser/">JavaScript in the Browser</a>
-          <a href="@/05_http/">HTTP</a>
-          <a href="@/06_server/">A Server</a>
-          <a href="@/07_db/">Using a Database</a>
-          <a href="@/08_test/">Testing the Server</a>
-          <a href="@/09_view/">Serving HTML</a>
-          <a href="@/10_forms/">Using Forms</a>
-          <a href="@/11_htmx/">Using HTMX</a>
-          <a href="@/12_migrate/">Database Migration</a>
-          <a href="@/13_auth/">Authentication</a>
-          <a href="@/14_automate/">Testing in the Browser</a>
-          <a href="@/15_crypt/">Encryption</a>
-          <a href="@/16_upload/">Uploading Files</a>
-          <a href="@/17_log/">Logging and Auditing</a>
-          <a href="@/18_perm/">Permissions</a>
-          <a href="@/19_access/">Accessibility</a>
-          <a href="@/20_gui/">A Graphical User Interface</a>
-          <a href="@/21_graphics/">Dynamic Graphics</a>
-          <a href="@/22_intl/">Internationalization</a>
-          <a href="@/23_sessions/">Sessions</a>
-          <a href="@/24_cache/">Caching</a>
+{% for key in lessons %}
+          <a href="{{key}}">{{lessons[key]}}</a>
+{% endfor %}
 	</span>
       </span>
       &middot;
       <span class="dropdown">
         <a href="#">Extras</a>
         <span id="nav-extras" class="dropdown-content">
-          <a href="@/98_workflow/">Designing a Workflow</a>
-          <a href="@/99_cert/">Certificates</a>
-	  <a href="@/license/">License</a>
-	  <a href="@/conduct/">Code of Conduct</a>
-	  <a href="@/contrib/">Contributing</a>
-	  <a href="@/bibliography/">Bibliography</a>
-	  <a href="@/glossary/">Glossary</a>
+{% for key in appendices %}
+          <a href="{{key}}">{{appendices[key]}}</a>
+{% endfor %}
         </span>
       </span>
     </nav>
@@ -58,7 +33,7 @@
 {{content}}
     </main>
     <footer>
-      <a href="@/">The Webonomicon</a>
+      <a href="@/">{{title}}</a>
       copyright &copy; 2025
       <a href="@/#acknowledgments">the authors</a>
     </footer>

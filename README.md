@@ -33,9 +33,9 @@ Suggestions and help are greatly appreciated.
 -   Harper has tried doing asynchronous online courses a couple of times,
     but strongly prefers learning in real time with other people.
 
-## Syllabus
+## Lessons
 
-<div id="syllabus" markdown="1">
+<div id="lessons" markdown="1">
 
 1.  [Introduction](./01_intro/)
 1.  [HTML and CSS](./02_htmlcss/)
