@@ -4,10 +4,7 @@
 
 ## Overview
 
-<figure id="server-concept-map">
-  <img src="server_concept_map.svg" alt="concept map of Flask server"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="server-concept-map" img="server_concept_map.svg" alt="concept map of Flask server" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
@@ -72,8 +69,8 @@ if __name__ == "__main__":
     main()
 ```
 
--   [`server_func.py`](./server_func.py) creates the application and configures [routes](g:route) in a function
-    -   Get path to staff CSV from `DATA` [environment variable](g:env-var)
+-   [`server_func.py`](./server_func.py) creates the application and configures [%g route "routes" %] in a function
+    -   Get path to staff CSV from `DATA` [%g env-var "environment variable" %]
     -   Read and convert to HTML with [PrettyTable][prettytable]
 
 ```{data-file="server_func.py:keep"}
@@ -91,9 +88,9 @@ def create_app():
 ```
 
 -   [`server_routes.py`](./server_routes.py) configures several routes
-    -   Use [query parameters](g:query-parameter) or [URL fragments](g:url-fragment)
+    -   Use [%g query-parameter "query parameters" %] or [%g url-fragment "URL fragments" %]
         to select individual row or column
-    -   Use [Polars][polars] to get a [dataframe](g:dataframe) and [Flask][flask] to convert to JSON
+    -   Use [Polars][polars] to get a [%g dataframe "dataframe" %] and [Flask][flask] to convert to JSON
 
 ```{data-file="server_routes.py:keep"}
 def create_app():

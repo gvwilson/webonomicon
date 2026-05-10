@@ -4,14 +4,11 @@
 
 ## Overview
 
-<figure id="test-concept-map">
-  <img src="test_concept_map.svg" alt="concept map of browser-based testing"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="test-concept-map" img="test_concept_map.svg" alt="concept map of browser-based testing" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
--   [Automate the browser](g:browser-automation) with [Selenium][selenium]
+-   [%g browser-automation "Automate the browser" %] with [Selenium][selenium]
 -   [`test_home_page.py`](./test_home_page.py)
     -   Create a driver in a fixture that uses `yield` to ensure shutdown
     -   Go to a URL

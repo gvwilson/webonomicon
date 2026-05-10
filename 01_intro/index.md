@@ -7,11 +7,11 @@
 -   Use modern Python and JavaScript tools
     -   Yes, you're going to have to learn some JavaScript…
     -   …but it's not as bad as you've been told
--   All of these materials can be freely re-used under an [open license](@root/license/)
+-   All of these materials can be freely re-used under an [open license](@/license/)
 
 ## Setup
 
--   Install [uv][uv] for managing Python packages and [virtual environments](g:virtual-env) and then run:
+-   Install [uv][uv] for managing Python packages and [%g virtual-env "virtual environments" %] and then run:
     -   `uv venv` in the root directory of this project to create a virtual environment in `./.venv`
     -   `source .venv/bin/activate` to activate that virtual environment
     -   `uv pip install -r pyproject.toml` to install requirements

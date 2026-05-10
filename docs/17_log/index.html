@@ -5,79 +5,83 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Logging and Auditing</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a class="active" href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1>Logging and Auditing</h1>
 
 <ul>
 <li>Add structured logging using <a href="https://www.structlog.org/"><code>structlog</code></a></li>
 <li>Old-fashioned logging generates human-readable text:</li>
 </ul>
-<pre class=""><code>2025-03-13 14:30:21 INFO: File 'example.txt' uploaded successfully
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="mi">2025</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">13</span><span class="w"> </span><span class="mi">14</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">21</span><span class="w"> </span><span class="n">INFO</span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="s1">'example.txt'</span><span class="w"> </span><span class="n">uploaded</span><span class="w"> </span><span class="n">successfully</span>
+</code></pre></div>
 <ul>
 <li>Structured logging writes data objects:</li>
 </ul>
-<pre class="language-json"><code class="language-json">{
-  "timestamp": "2025-03-13T14:30:21.123Z",
-  "level": "info",
-  "event": "file_uploaded",
-  "filename": "example.txt",
-  "file_size_bytes": 12345,
-  "content_type": "text/plain",
-  "ip_address": "192.168.1.1",
-  "user_agent": "Mozilla/5.0"
-}
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-03-13T14:30:21.123Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file_uploaded"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.txt"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"file_size_bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"content_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/plain"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192.168.1.1"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"user_agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mozilla/5.0"</span>
+<span class="p">}</span>
+</code></pre></div>
 <ul>
 <li>Benefits:<ul>
 <li>Logs can be easily queried and analyzed by code (no fancy regular expressions)</li>
@@ -135,21 +139,33 @@ that's a bad practice.)</li>
 </ul>
 </li>
 </ul>
-<pre class="language-python"><code class="language-python">@app.before_request
-def log_request():
-    """Log all incoming requests."""
-    if not request.path.startswith('/static'):
-        logger.info("request", 
-                  method=request.method,
-                  path=request.path,
-                  ip=request.remote_addr,
-                  user_agent=request.headers.get('User-Agent'))
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">before_request</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">log_request</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Log all incoming requests."""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'/static'</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">"request"</span><span class="p">,</span> 
+             <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+             <span class="n">path</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+             <span class="n">ip</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">remote_addr</span><span class="p">,</span>
+             <span class="n">user_agent</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'User-Agent'</span><span class="p">)</span>
+        <span class="p">)</span>
+</code></pre></div>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../16_upload/">Uploading Files</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../18_perm/">Permissions</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

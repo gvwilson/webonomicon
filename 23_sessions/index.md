@@ -4,10 +4,7 @@
 
 ## Overview
 
-<figure id="sessions-concept-map">
-  <img src="sessions_concept_map.svg" alt="concept map of sessions with JWT"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="sessions-concept-map" img="sessions_concept_map.svg" alt="concept map of sessions with JWT" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
@@ -29,7 +26,7 @@
     -   Token _should_ be set as an HTTP-only cookie for security
     -   When a cookie is marked this way,
         JavaScript can no longer access the cookie using `document.cookie`
-    -   Prevents [cross-site scripting](g:xss) (XSS) attacks)
+    -   Prevents [%g xss "cross-site scripting" %] (XSS) attacks)
 -   Protected routes (like `/exp/<staff_id>`) verify the JWT before granting access
     -   Provides stateless authentication, improving scalability
         -   JWTs are stateless, meaning the server doesn't need to store session information

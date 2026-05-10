@@ -4,23 +4,20 @@
 
 ## Overview
 
-<figure id="http-concept-map">
-  <img src="http_concept_map.svg" alt="concept map of HTTP"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="http-concept-map" img="http_concept_map.svg" alt="concept map of HTTP" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
 -   Typical web application has clients and servers
-    -   [Client](g:client) initiates communication by sending a message and waiting for a response
-    -   [Server](g:server) waits for requests and then replies to them
--   Communicate using [Internet Protocol](g:ip) (IP), and specifically [Transmission Control Protocol](g:tcp) (TCP/IP)
+    -   [%g client "Client" %] initiates communication by sending a message and waiting for a response
+    -   [%g server "Server" %] waits for requests and then replies to them
+-   Communicate using [%g ip "Internet Protocol" %] (IP), and specifically [%g tcp "Transmission Control Protocol" %] (TCP/IP)
     -   Makes communication between computers look like reading and writing files
--   A [socket](g:socket) is one end of a point-to-point channel
+-   A [%g socket "socket" %] is one end of a point-to-point channel
     -   Consists of an IP address (identifies machine) and a port on that machine
-    -   [IP address](g:ip-address) is four 8-bit numbers(e.g., `93.184.216.34`)
-    -   [Domain Name System](g:dns) (DNS) matches these to symbolic names like `example.com`
-    -   [Port](g:port) is a number in the range 0-65535
+    -   [%g ip-address "IP address" %] is four 8-bit numbers(e.g., `93.184.216.34`)
+    -   [%g dns "Domain Name System" %] (DNS) matches these to symbolic names like `example.com`
+    -   [%g port "Port" %] is a number in the range 0-65535
     -   Only one process can use a port at a time
 
 ### Using Sockets
@@ -64,9 +61,9 @@ echo "testing" | nc 127.0.0.1 5000
 
 ### HTTP Request and Response
 
--   [HyperText Transfer Protocol](g:http) (HTTP) is deliberately simple
-    -   Send [request](g:http-request) with path, headers, and body
-    -   Get [response](g:http-response) with status, headers, and content
+-   [%g http "HyperText Transfer Protocol" %] (HTTP) is deliberately simple
+    -   Send [%g http-request "request" %] with path, headers, and body
+    -   Get [%g http-response "response" %] with status, headers, and content
 -   Minimal request is just `GET /index.html HTTP/1.1`
     -   Method
     -   Path

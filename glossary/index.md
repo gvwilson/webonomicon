@@ -8,20 +8,11 @@
 <span id="arrow-notation">arrow notation</span>
 :   FIXME
 
-`async` (keyword in JavaScript)
-:   See [JavaScript `async` keyword](#js-async)
-
 <span id="async-operation">asynchronous operation</span>
 :   FIXME
 
 <span id="attribute">attribute</span>
 :   FIXME
-
-<span id="auditing">auditing</span>
-:   FIXME
-
-`await` (keyword in JavaScript)
-:   See [JavaScript `await` keyword](#js-await)
 
 ## B
 
@@ -156,12 +147,6 @@
 <span id="l10n">Localization (l10n)</span>
 :   FIXME
 
-<span id="log">log</span>
-:   FIXME
-
-<span id="logging">logging</span>
-:   FIXME
-
 ## M
 
 <span id="multithreading">multithreading</span>
@@ -253,10 +238,10 @@
 <span id="tag">tag</span>
 :   FIXME
 
-<span id="tcp">Transmission Control Protocol</span>
+<span id="test-client">test client</span>
 :   FIXME
 
-<span id="test-client">test client</span>
+<span id="tcp">Transmission Control Protocol</span>
 :   FIXME
 
 <span id="truthiness">truthiness</span>
@@ -276,9 +261,6 @@
 :   FIXME
 
 ## W
-
-<span id="workflow">workflow</span>
-:   FIXME
 
 ## X
 

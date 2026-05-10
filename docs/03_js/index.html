@@ -5,59 +5,63 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>An Hour of JavaScript</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a class="active" href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1>An Hour of JavaScript</h1>
-<p id="terms">Terms defined: <a href="../glossary/#arrow-notation">arrow notation</a>, <a href="../glossary/#async-operation">asynchronous operation</a>, <a href="../glossary/#dotted-notation">dotted notation</a>, <a href="../glossary/#promise">promise</a>, <a href="../glossary/#string-interpolation">string interpolation</a>, <a href="../glossary/#truthiness">truthiness</a></p>
+
 <blockquote>
 <p>JavaScript is the only language that I'm aware of
 that people feel they don't need to learn
@@ -68,24 +72,24 @@ before they start using it.</p>
 <li>Install <a href="https://deno.com/">deno</a> for command-line JavaScript</li>
 </ul>
 <h2>Variables, Types, and Control Flow</h2>
-<pre class=""><code data-file="console_log.js">console.log('hello, world');
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code>console.log('hello, world');
+</code></pre></div>
 <ul>
 <li>Run program as <code>deno run program.js</code></li>
 <li><code>console</code> is a built-in module</li>
-<li>Use the same <a href="../glossary/#dotted-notation">dotted notation</a> as Python</li>
+<li>Use the same <a class="gl-ref" href="../glossary/#dotted-notation">dotted notation</a> as Python</li>
 <li>Trailing semi-colon is no longer required but commonly used</li>
 </ul>
-<pre class=""><code data-file="loop_if_truthiness.js">const values = [0, 1, '', 'text', undefined, null, [], [2, 3]];
-for (const val of values) {
-    const type = typeof val;
-    if (val) {
-        console.log(`val '${val}' of type ${type} seems true`);
-    } else {
-        console.log(`val '${val}' of type ${type} seems false`);
-    }
-}
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span><span class="w"> </span><span class="s1">'text'</span><span class="p">,</span><span class="w"> </span><span class="n">undefined</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">typeof</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">val</span><span class="w"> </span><span class="s1">'${val}'</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">type</span><span class="p">}</span><span class="w"> </span><span class="n">seems</span><span class="w"> </span><span class="bp">true</span><span class="err">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">val</span><span class="w"> </span><span class="s1">'${val}'</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">type</span><span class="p">}</span><span class="w"> </span><span class="n">seems</span><span class="w"> </span><span class="bp">false</span><span class="err">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <ul>
 <li><code>const</code> defines a constant<ul>
 <li>The array contents aren't constant: the reference is</li>
@@ -100,125 +104,135 @@ for (const val of values) {
 <li>Parentheses are required</li>
 <li><code>typeof</code> is an operator not a function, and returns a string</li>
 <li><code>if</code> / <code>else if</code> / <code>else</code> work as expected</li>
-<li>Use back-quotes and <code>${…}</code> for <a href="../glossary/#string-interpolation">string interpolation</a></li>
-<li>JavaScript considers an empty array to be <a href="../glossary/#truthiness">truthy</a></li>
+<li>Use back-quotes and <code>${…}</code> for <a class="gl-ref" href="../glossary/#string-interpolation">string interpolation</a></li>
+<li>JavaScript considers an empty array to be <a class="gl-ref" href="../glossary/#truthiness">truthy</a></li>
 <li>Always use <code>===</code> (triple equals) and <code>!==</code> for equality</li>
 <li>Otherwise JavaScript does some strange type conversions</li>
 </ul>
 <h2>Objects</h2>
-<pre class=""><code data-file="object_access.js">const person = {
-    'staff_id': 31,
-    'personal': 'Loan',
-    'family': 'Nguyen'
-};
-console.log(`personal: ${person.personal}`);
-console.log(`family: ${person['family']}`);
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">'staff_id'</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'personal'</span><span class="p">:</span><span class="w"> </span><span class="s1">'Loan'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'family'</span><span class="p">:</span><span class="w"> </span><span class="s1">'Nguyen'</span>
+<span class="p">};</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">personal</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">person</span><span class="o">.</span><span class="n">personal</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">family</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">person</span><span class="p">[</span><span class="s1">'family'</span><span class="p">]}</span><span class="err">`</span><span class="p">);</span>
+</code></pre></div>
 <ul>
 <li>JavaScript objects are (kind of) like Python dictionaries</li>
 <li>Create so many of these that keys don't have to be quoted</li>
 </ul>
-<pre class=""><code data-file="object_unquoted.js">const person = {
-    staff_id: 31,
-    personal: 'Loan',
-    family: 'Nguyen'
-};
-console.log(`personal: ${person.personal}`);
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">staff_id</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+<span class="w">    </span><span class="n">personal</span><span class="p">:</span><span class="w"> </span><span class="s1">'Loan'</span><span class="p">,</span>
+<span class="w">    </span><span class="n">family</span><span class="p">:</span><span class="w"> </span><span class="s1">'Nguyen'</span>
+<span class="p">};</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">personal</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">person</span><span class="o">.</span><span class="n">personal</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+</code></pre></div>
 <ul>
 <li>Can use variables' names and values to construct objects</li>
 </ul>
-<pre class=""><code data-file="object_variables_as_fields.js">const staff_id = 31;
-const personal = 'Loan';
-const family = 'Nguyen';
-const person = {staff_id, personal, family};
-console.log(`person: ${JSON.stringify(person)}`);
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">staff_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">personal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Loan'</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Nguyen'</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">staff_id</span><span class="p">,</span><span class="w"> </span><span class="n">personal</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="p">};</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">person</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">person</span><span class="p">)}</span><span class="err">`</span><span class="p">);</span>
+</code></pre></div>
 <ul>
 <li><code>JSON</code> is another built-in module</li>
 <li>Its <code>stringify</code> function does what its name suggests</li>
 <li>Without this, <code>person</code> is displayed as <code>[Object object]</code></li>
 </ul>
 <h2>Functions</h2>
-<pre class=""><code data-file="function_def_and_call.js">function limits (values) {
-  if (!values.length) {
-    return [undefined, undefined];
-  }
-  let low = values[0];
-  let high = values[0];
-  for (let v of values) {
-    if (v &lt; low) {
-        low = v;
-    }
-    if (v &gt; high) {
-        high = v;
-    }
-  }
-  return [low, high]
-}
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="n">function</span><span class="w"> </span><span class="n">limits</span><span class="w"> </span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">values</span><span class="o">.</span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">undefined</span><span class="p">,</span><span class="w"> </span><span class="n">undefined</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">let</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">  </span><span class="n">let</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">let</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">low</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">high</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">low</span><span class="p">,</span><span class="w"> </span><span class="n">high</span><span class="p">]</span>
+<span class="p">}</span>
 
-const result = limits([1, -3, 2, 7]);
-console.log(result);
-</code></pre>
+<span class="k">const</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">limits</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">]);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</code></pre></div>
 <ul>
 <li><code>let</code> introduces a variable</li>
 <li>The older <code>var</code> is still sometimes used</li>
 <li>Functions take parameters, create a scope, etc.</li>
 </ul>
-<pre class=""><code data-file="arrow_function.js">const largest = (left, right) =&gt; {
-    if (left &lt; right) {
-        return left;
-    } else {
-        return right;
-    }
-}
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">largest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">left</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">right</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-console.log(`largest(3, 5) is ${largest(3, 5)}`);
-</code></pre>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">largest</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">largest</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)}</span><span class="err">`</span><span class="p">);</span>
+</code></pre></div>
 <ul>
 <li>A function is just another kind of object</li>
-<li>Can define using <a href="../glossary/#arrow-notation">arrow notation</a> and then assign to a variable</li>
+<li>Can define using <a class="gl-ref" href="../glossary/#arrow-notation">arrow notation</a> and then assign to a variable</li>
 <li>Handy in a language that uses lots of little functions</li>
 </ul>
-<pre class=""><code data-file="higher_order_func.js">const values = [1, -3, 5, -7];
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">7</span><span class="p">];</span>
 
-const is_positive = values.map(v =&gt; v &gt;= 0);
-console.log(`is_positive: ${is_positive}`);
+<span class="k">const</span><span class="w"> </span><span class="n">is_positive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">is_positive</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">is_positive</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
 
-const keep_positive = values.filter(v =&gt; v &gt;= 0);
-console.log(`keep_positive: ${keep_positive}`);
+<span class="k">const</span><span class="w"> </span><span class="n">keep_positive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">keep_positive</span><span class="p">:</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">keep_positive</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
 
-const print_positive = values.forEach(v =&gt; {
-    if (v &gt;= 0) {
-        console.log(v);
-    }
-});
-</code></pre>
+<span class="k">const</span><span class="w"> </span><span class="n">print_positive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
 <h2>Asynchronous Operations</h2>
-<pre class=""><code data-file="promises.js">const middle = Deno.readTextFile('middle.txt');
-console.log(`middle is ${middle}`);
-middle.then(value =&gt; {
-    console.log(`middle.then is ${value}`);
-});
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Deno</span><span class="o">.</span><span class="n">readTextFile</span><span class="p">(</span><span class="s1">'middle.txt'</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">middle</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">middle</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="n">middle</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">middle</span><span class="o">.</span><span class="n">then</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">value</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
 <ul>
-<li>A <a href="../glossary/#promise">promise</a> represents a delayed operation</li>
+<li>A <a class="gl-ref" href="../glossary/#promise">promise</a> represents a delayed operation</li>
 <li>Use <code>.then</code> method to tell JavaScript what to do when a value becomes available<ul>
 <li>Use this a lot in web programming so that the browser won't freeze up</li>
 </ul>
 </li>
 </ul>
-<pre class=""><code data-file="await.js">const value = await Deno.readTextFile('left.txt');
-console.log(`left value is ${value}`);
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="k">const</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">Deno</span><span class="o">.</span><span class="n">readTextFile</span><span class="p">(</span><span class="s1">'left.txt'</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">left</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">value</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+</code></pre></div>
 <ul>
-<li><code>await</code> makes <a href="../glossary/#async-operation">asynchronous operations</a> more readable</li>
+<li><code>await</code> makes <a class="gl-ref" href="../glossary/#async-operation">asynchronous operations</a> more readable</li>
 </ul>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../02_htmlcss/">HTML and CSS</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../04_browser/">JavaScript in the Browser</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

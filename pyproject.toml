@@ -23,8 +23,16 @@ dependencies = [
     "ruff",
     "selenium",
     "snailz",
-    "structlog"
+    "structlog",
+    "taskipy>=1.14.1",
 ]
+
+[tool.taskipy.tasks]
+bib = {cmd = "mccole bib", help = "Check bibliography entries."}
+clean = {cmd = "find . -type f -name '*~' -exec rm {} \\; && find . -type d -name __pycache__ | xargs rm -rf && find . -type d -name .ruff_cache | xargs rm -rf", help = "Clean up generated and cache files."}
+check = {cmd = "mccole check --src . --dst docs && typos *.md */*.md", help = "Check code and project."}
+serve = {cmd = "python -m http.server -d docs 8000", help = "Serve generated HTML on port 8000."}
+site = {cmd = "mccole build --src . --dst docs && touch docs/.nojekyll", help = "Build HTML."}
 
 [tool.ruff.lint.extend-per-file-ignores]
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
@@ -49,11 +57,3 @@ skips = [
     "unused/**",
     "uv.lock"
 ]
-
-[tool.mccole.renames]
-"README.md" = ""
-"CODE_OF_CONDUCT.md" = "conduct"
-"CONTRIBUTING.md" = "contrib"
-"LICENSE.md" = "license"
-"bibliography.md" = "bibliography"
-"glossary.md" = "glossary"

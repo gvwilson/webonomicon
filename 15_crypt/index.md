@@ -4,25 +4,22 @@
 
 ## Overview
 
-<figure id="crypt-concept-map">
-  <img src="crypt_concept_map.svg" alt="concept map of password encryption"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="crypt-concept-map" img="crypt_concept_map.svg" alt="concept map of password encryption" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
--   Never store passwords as [plaintext](g:plaintext)
--   Create a migration to encrypt them and save [ciphertext](g:ciphertext)
-    -   Generate a [secret](g:secret) in [`generate_encryption.py`](./generate_encryption.py)
+-   Never store passwords as [%g plaintext "plaintext" %]
+-   Create a migration to encrypt them and save [%g ciphertext "ciphertext" %]
+    -   Generate a [%g secret "secret" %] in [`generate_encryption.py`](./generate_encryption.py)
     -   `make_secret` in [`util.py`](./util.py) uses Python's [secrets][py-secrets] module
     -   Save in a file that never goes in version control (or anywhere else)
     -   Then encrypt passwords using `blake2b` from [hashlib][py-hashlib]
--   [Hash](g:hashing) the combination of the secret and their password
-    -   The secret is a [salt](g:salt)
+-   [%g hashing "Hash" %] the combination of the secret and their password
+    -   The secret is a [%g salt "salt" %]
 -   When someone logs in:
     -   Check that the encrypted version of the secret plus their password matches the stored value
     -   Create a random number as a cookie
-    -   Store that and their ID in a dictionary of [sessions](g:session)
+    -   Store that and their ID in a dictionary of [%g session "sessions" %]
 -   When someone requests access to experimental data:
     -   If their cookie is in the sessions, use their staff ID
     -   Otherwise reject as unauthorized

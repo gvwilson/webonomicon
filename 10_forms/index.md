@@ -4,15 +4,12 @@
 
 ## Overview
 
-<figure id="forms-concept-map">
-  <img src="forms_concept_map.svg" alt="concept map of HTML forms"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="forms-concept-map" img="forms_concept_map.svg" alt="concept map of HTML forms" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
 -   Remove everything except display of a table of all staff
--   Add a [form](g:form) for adding new people
+-   Add a [%g form "form" %] for adding new people
     -   Copy the database before running
 -   [`explore_insert.py`](./explore_insert.py): experiment with insertion
     -   Select largest staff ID, add one, insert: race condition

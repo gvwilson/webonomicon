@@ -58,9 +58,9 @@
         Creating a fresh bound logger ensures each request gets its own context.
     -   Flask handles multiple requests concurrently,
         and reusing a global bound logger could lead to context data from one request leaking into logs for another request.
-	(We actually run this example in single-threaded mode so that it's safe to append things to the `LOGS` variable,
-	but as noted above,
-	that's a bad practice.)
+    (We actually run this example in single-threaded mode so that it's safe to append things to the `LOGS` variable,
+    but as noted above,
+    that's a bad practice.)
 -   We use Flask's `before_request` handler to automatically log all incoming requests
     -   This ensures consistent handling and formatting of log events
 
@@ -69,9 +69,11 @@
 def log_request():
     """Log all incoming requests."""
     if not request.path.startswith('/static'):
-        logger.info("request", 
-                  method=request.method,
-                  path=request.path,
-                  ip=request.remote_addr,
-                  user_agent=request.headers.get('User-Agent'))
+        logger.info(
+            "request", 
+             method=request.method,
+             path=request.path,
+             ip=request.remote_addr,
+             user_agent=request.headers.get('User-Agent')
+        )
 ```

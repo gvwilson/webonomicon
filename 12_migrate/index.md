@@ -4,14 +4,11 @@
 
 ## Overview
 
-<figure id="migrate-concept-map">
-  <img src="migrate_concept_map.svg" alt="concept map of database migration"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="migrate-concept-map" img="migrate_concept_map.svg" alt="concept map of database migration" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
--   A [database migration](g:db-migration) is a change to the structure of a database
+-   A [%g db-migration "database migration" %] is a change to the structure of a database
     -   Versus a change to its contents
 -   Use tools like [sqitch][sqitch] to manage these
 -   Each change has three parts

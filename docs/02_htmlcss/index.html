@@ -5,74 +5,78 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HTML and CSS</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a class="active" href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1>HTML and CSS</h1>
-<p id="terms">Terms defined: <a href="../glossary/#css-class">CSS class</a>, <a href="../glossary/#css-variable">CSS variable</a>, <a href="../glossary/#css">Cascading Style Sheets (CSS)</a>, <a href="../glossary/#html">HyperText Markup Language (HTML)</a>, <a href="../glossary/#attribute">attribute</a>, <a href="../glossary/#element">element (in HTML)</a>, <a href="../glossary/#escape-sequence">escape sequence</a>, <a href="../glossary/#external-style-sheet">external style sheet</a>, <a href="../glossary/#pseudo-element">pseudo-element</a>, <a href="../glossary/#root-element">root element</a>, <a href="../glossary/#tag">tag</a></p>
+
 <h2>Overview</h2>
-<figure id="htmlcss-concept-map">
+<figure id="f:htmlcss-concept-map">
 <img alt="concept map of HTML and CSS" src="htmlcss_concept_map.svg"/>
-<figcaption>Figure 1: Concept Map</figcaption>
+<figcaption>Figure 1: Figure 1: Concept Map</figcaption>
 </figure>
 <h2>Introduction</h2>
 <ul>
-<li><a href="../glossary/#html">HyperText Markup Language</a> (HTML) is the standard way to represent documents on the web</li>
-<li><a href="../glossary/#css">Cascading Style Sheets</a> (CSS) is the standard way to style them</li>
+<li><a class="gl-ref" href="../glossary/#html">HyperText Markup Language</a> (HTML) is the standard way to represent documents on the web</li>
+<li><a class="gl-ref" href="../glossary/#css">Cascading Style Sheets</a> (CSS) is the standard way to style them</li>
 <li>Both are more complicated than they should have been but we need to understand a bit of both</li>
 </ul>
 <h2>HTML</h2>
 <ul>
-<li>HTML document contains <a href="../glossary/#element">elements</a> and text</li>
-<li>Elements are shown using <a href="../glossary/#tag">tags</a><ul>
+<li>HTML document contains <a class="gl-ref" href="../glossary/#element">elements</a> and text</li>
+<li>Elements are shown using <a class="gl-ref" href="../glossary/#tag">tags</a><ul>
 <li>Opening tag <code>&lt;tagname&gt;</code> shows where the element begins</li>
 <li>Closing tag <code>&lt;/tagname&gt;</code> shows where it ends</li>
 </ul>
@@ -82,14 +86,56 @@
 <li><code>&lt;X&gt;…&lt;Y&gt;…&lt;/X&gt;&lt;/Y&gt;</code> is not</li>
 </ul>
 </li>
-<li>And every document should have a single <a href="../glossary/#root-element">root element</a> that encloses everything else</li>
+<li>And every document should have a single <a class="gl-ref" href="../glossary/#root-element">root element</a> that encloses everything else</li>
 <li>Since <code>&lt;</code> and <code>&gt;</code> are used to show where tags start and end,
-    must use <a href="../glossary/#escape-sequence">escape sequences</a> to represent them<ul>
+    must use <a class="gl-ref" href="../glossary/#escape-sequence">escape sequences</a> to represent them<ul>
 <li>Written <code>&amp;name;</code></li>
 </ul>
 </li>
 </ul>
-<div class="table" data-caption="Table 1: HTML Escape Characters" data-tbl="escape_characters.tbl" id="htmlcss-escape-characters"></div>
+<div data-caption="Table 1: HTML Escape Characters" id="t:htmlcss-escape-characters">
+<table><caption>Table 1: Table 1: HTML Escape Characters</caption>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Escape Sequence</th>
+<th scope="col">Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>less than</td>
+<td><code>&amp;lt;</code></td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>greater than</td>
+<td><code>&amp;gt;</code></td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>ampersand</td>
+<td><code>&amp;amp;</code></td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td><code>&amp;copy;</code></td>
+<td>©</td>
+</tr>
+<tr>
+<td>plus/minus</td>
+<td><code>&amp;plusmn;</code></td>
+<td>±</td>
+</tr>
+<tr>
+<td>micro</td>
+<td><code>&amp;micro;</code></td>
+<td>µ</td>
+</tr>
+</tbody>
+</table>
+</div>
 <ul>
 <li>Well-formed HTML page has:<ul>
 <li><code>&lt;!DOCTYPE html&gt;</code> as the first line</li>
@@ -101,12 +147,79 @@
 <li>Indentation doesn't matter to the browser (but make source more readable to people)</li>
 <li>Use <code>&lt;!--</code> and <code>--&gt;</code> to start and end comments (which cannot be nested)</li>
 </ul>
-<div class="table" data-caption="Table 2: HTML Tags" data-tbl="html_tags.tbl" id="htmlcss-html-tags"></div>
+<div data-caption="Table 2: HTML Tags" id="t:htmlcss-html-tags">
+<table><caption>Table 2: Table 2: HTML Tags</caption>
+<thead>
+<tr>
+<th scope="col">HTML Tag</th>
+<th scope="col">Used For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>div</code></td>
+<td>section in a document</td>
+</tr>
+<tr>
+<td><code>h1</code></td>
+<td>level-1 heading</td>
+</tr>
+<tr>
+<td><code>h2</code></td>
+<td>level-2 heading, etc.</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>paragraph</td>
+</tr>
+<tr>
+<td><code>span</code></td>
+<td>inline text</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>hyperlink</td>
+</tr>
+<tr>
+<td><code>img</code></td>
+<td>reference to image</td>
+</tr>
+<tr>
+<td><code>ul</code></td>
+<td>unordered list</td>
+</tr>
+<tr>
+<td><code>ol</code></td>
+<td>ordered (numbered) list</td>
+</tr>
+<tr>
+<td><code>li</code></td>
+<td>list element</td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td>table</td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td>table row</td>
+</tr>
+<tr>
+<td><code>th</code></td>
+<td>table heading</td>
+</tr>
+<tr>
+<td><code>td</code></td>
+<td>table data cell</td>
+</tr>
+</tbody>
+</table>
+</div>
 <ul>
-<li>Customize elements with <code>name="value"</code> <a href="../glossary/#attribute">attributes</a></li>
+<li>Customize elements with <code>name="value"</code> <a class="gl-ref" href="../glossary/#attribute">attributes</a></li>
 </ul>
-<pre class=""><code>&lt;h1 align="center"&gt;A Centered Heading&lt;/h1&gt;
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="nt">&lt;h1</span><span class="w"> </span><span class="na">align=</span><span class="s">"center"</span><span class="nt">&gt;</span>A<span class="w"> </span>Centered<span class="w"> </span>Heading<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div>
 <ul>
 <li>Use <code>href</code> attribute of <code>a</code> element to link to:<ul>
 <li>Another page with a full URL such as <code>https://example.com/page.html</code></li>
@@ -128,8 +241,8 @@
 </ul>
 </li>
 </ul>
-<pre class=""><code>&lt;meta charset="utf-8"&gt;
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code>&lt;meta charset="utf-8"&gt;
+</code></pre></div>
 <ul>
 <li>HTML Entities vs. Direct Unicode Characters:<ul>
 <li>HTML entities like <code>&amp;copy;</code> are useful for ensuring compatibility across different encodings and older systems</li>
@@ -137,10 +250,10 @@
 </ul>
 </li>
 </ul>
-<pre class=""><code>&lt;p&gt;&amp;copy; 2024&lt;/p&gt;
-&lt;!-- is equivalent to --&gt;
-&lt;p&gt;© 2024&lt;/p&gt;
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="nt">&lt;p&gt;</span><span class="ni">&amp;copy;</span><span class="w"> </span>2024<span class="nt">&lt;/p&gt;</span>
+<span class="cm">&lt;!-- is equivalent to --&gt;</span>
+<span class="nt">&lt;p&gt;</span>©<span class="w"> </span>2024<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
 <ul>
 <li>Both will render the same in a browser, but the direct Unicode character is more readable in the source code.</li>
 </ul>
@@ -150,35 +263,35 @@
 <li>Hard to keep styling consistent</li>
 </ul>
 </li>
-<li>Give elements <a href="../glossary/#css-class">classes</a> and defines styles for classes</li>
-<li><a href="./styled_page.html"><code>styled_page.html</code></a> uses an <a href="../glossary/#external-style-sheet">external style sheet</a>
+<li>Give elements <a class="gl-ref" href="../glossary/#css-class">classes</a> and defines styles for classes</li>
+<li><a href="./styled_page.html"><code>styled_page.html</code></a> uses an <a class="gl-ref" href="../glossary/#external-style-sheet">external style sheet</a>
 <a href="./styled_page.css"><code>styled_page.css</code></a><ul>
 <li>Which can be shared by many pages</li>
 </ul>
 </li>
-<li>Can define <a href="../glossary/#css-variable">CSS variables</a> or style things directly</li>
+<li>Can define <a class="gl-ref" href="../glossary/#css-variable">CSS variables</a> or style things directly</li>
 </ul>
-<pre class=""><code data-file="styled_page.css">:root {
-    --extra-space: 5px;
-    --page-width: 40em;
-}
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="p">:</span><span class="n">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">space</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+<span class="w">    </span><span class="o">--</span><span class="n">page</span><span class="o">-</span><span class="n">width</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="n">em</span><span class="p">;</span>
+<span class="p">}</span>
 
-body {
-    font-family: sans-serif;
-    max-width: var(--page-width);
-    border: 1px solid gray;
-    margin: var(--extra-space);
-    padding: var(--extra-space);
-}
+<span class="n">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span><span class="w"> </span><span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">max</span><span class="o">-</span><span class="n">width</span><span class="p">:</span><span class="w"> </span><span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">page</span><span class="o">-</span><span class="n">width</span><span class="p">);</span>
+<span class="w">    </span><span class="n">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">px</span><span class="w"> </span><span class="n">solid</span><span class="w"> </span><span class="n">gray</span><span class="p">;</span>
+<span class="w">    </span><span class="n">margin</span><span class="p">:</span><span class="w"> </span><span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">space</span><span class="p">);</span>
+<span class="w">    </span><span class="n">padding</span><span class="p">:</span><span class="w"> </span><span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">space</span><span class="p">);</span>
+<span class="p">}</span>
 
-h1.title {
-    text-align: center;
-}
+<span class="n">h1</span><span class="o">.</span><span class="n">title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+<span class="p">}</span>
 
-span.keyword {
-    font-weight: bold;
-}
-</code></pre>
+<span class="n">span</span><span class="o">.</span><span class="n">keyword</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span><span class="w"> </span><span class="n">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <ul>
 <li>Simple rule like the one for <code>body</code> has the name of the tag and some properties in curly braces</li>
 <li>More complex rule has <code>tag.class</code> and properties<ul>
@@ -186,17 +299,27 @@ span.keyword {
 <li>Or <code>.class</code> or <code>#identifier</code></li>
 </ul>
 </li>
-<li>The <code>:root</code> <a href="../glossary/#pseudo-element">pseudo-element</a> lets us define global variables<ul>
+<li>The <code>:root</code> <a class="gl-ref" href="../glossary/#pseudo-element">pseudo-element</a> lets us define global variables<ul>
 <li>Names must begin with two dashes <code>--</code></li>
 <li>Refer to their values using <code>var(name)</code></li>
 </ul>
 </li>
 </ul>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../01_intro/">Introduction</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../03_js/">An Hour of JavaScript</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

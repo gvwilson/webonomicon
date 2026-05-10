@@ -4,10 +4,7 @@
 
 ## Overview
 
-<figure id="perm-concept-map">
-  <img src="perm_concept_map.svg" alt="concept map of permissions"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="perm-concept-map" img="perm_concept_map.svg" alt="concept map of permissions" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
@@ -18,8 +15,8 @@
 -   If we're going to add create, update, and delete, we should add *permissions*
     -   The ability to perform an operation on a thing
 -   Standard approach:
-    -   An [actor](g:actor) (person or similar) has zero or more [roles](g:role)
-    -   Each role is a set of [permissions](g:permission)
+    -   An [%g actor "actor" %] (person or similar) has zero or more [%g role "roles" %]
+    -   Each role is a set of [%g permission "permissions" %]
     -   E.g., *reader* role has *read* permission for all tables
 -   Represent permissions with two tables in the database
     -   Worry about authentication later

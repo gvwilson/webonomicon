@@ -4,10 +4,7 @@
 
 ## Overview
 
-<figure id="htmx-concept-map">
-  <img src="htmx_concept_map.svg" alt="concept map of HTMX"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="htmx-concept-map" img="htmx_concept_map.svg" alt="concept map of HTMX" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
@@ -33,7 +30,7 @@
 -   Running it now produces 404 error
 -   So implement `/exp/id` in server, models, and views
     -   `experiments` function in `models.py` uses an inner join
-    -   Add `*args` to `handle_format` to [spread arguments](g:spread-arguments) for convenience
+    -   Add `*args` to `handle_format` to [%g spread-arguments "spread arguments" %] for convenience
 -   More common for server to return JSON that a JavaScript library in the browser translates into HTML
 -   But that approach leads to large (slow) libraries in the browser
     -   Unfair to people using mobile, on slow connections, etc.

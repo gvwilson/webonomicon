@@ -18,7 +18,7 @@ console.log('hello, world');
 
 -   Run program as `deno run program.js`
 -   `console` is a built-in module
--   Use the same [dotted notation](g:dotted-notation) as Python
+-   Use the same [%g dotted-notation "dotted notation" %] as Python
 -   Trailing semi-colon is no longer required but commonly used
 
 ```{data-file="loop_if_truthiness.js"}
@@ -42,8 +42,8 @@ for (const val of values) {
 -   Parentheses are required
 -   `typeof` is an operator not a function, and returns a string
 -   `if` / `else if` / `else` work as expected
--   Use back-quotes and `${…}` for [string interpolation](g:string-interpolation)
--   JavaScript considers an empty array to be [truthy](g:truthiness)
+-   Use back-quotes and `${…}` for [%g string-interpolation "string interpolation" %]
+-   JavaScript considers an empty array to be [%g truthiness "truthy" %]
 -   Always use `===` (triple equals) and `!==` for equality
 -   Otherwise JavaScript does some strange type conversions
 
@@ -126,7 +126,7 @@ console.log(`largest(3, 5) is ${largest(3, 5)}`);
 ```
 
 -   A function is just another kind of object
--   Can define using [arrow notation](g:arrow-notation) and then assign to a variable
+-   Can define using [%g arrow-notation "arrow notation" %] and then assign to a variable
 -   Handy in a language that uses lots of little functions
 
 ```{data-file="higher_order_func.js"}
@@ -155,7 +155,7 @@ middle.then(value => {
 });
 ```
 
--   A [promise](g:promise) represents a delayed operation
+-   A [%g promise "promise" %] represents a delayed operation
 -   Use `.then` method to tell JavaScript what to do when a value becomes available
     -   Use this a lot in web programming so that the browser won't freeze up
 
@@ -164,4 +164,4 @@ const value = await Deno.readTextFile('left.txt');
 console.log(`left value is ${value}`);
 ```
 
--   `await` makes [asynchronous operations](g:async-operation) more readable
+-   `await` makes [%g async-operation "asynchronous operations" %] more readable

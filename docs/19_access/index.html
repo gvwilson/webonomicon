@@ -5,67 +5,81 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Accessibility</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a class="active" href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1 class="fixme">Accessibility</h1>
 
 <ul>
 <li><a href="./dark_mode.html"><code>dark_mode.html</code></a>: dark mode using media query</li>
 </ul>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../18_perm/">Permissions</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../20_gui/">A Graphical User Interface</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

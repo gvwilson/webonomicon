@@ -5,18 +5,9 @@
 This tutorial is a short introduction to web programming using modern tools and practices
 for data scientists who are comfortable using Python
 but have never built interactive websites before.
-All of the material is available under [open licenses](./LICENSE.md),
+All of the material is available under open licenses,
 and contributions through our GitHub repository are welcome.
-All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT.md).
-
-<div class="callout" markdown="1">
-
-This tutorial is still being outlined.
-Most sections will have additional examples (and much more explanation)
-before learners encounter it.
-Suggestions and help are greatly appreciated.
-
-</div>
+All contributors are required to respect our Code of Conduct.
 
 ## Learner Persona
 
@@ -33,63 +24,58 @@ Suggestions and help are greatly appreciated.
 -   Harper has tried doing asynchronous online courses a couple of times,
     but strongly prefers learning in real time with other people.
 
+<div class="row" markdown="1">
+<div class="col-6" markdown="1">
+
 ## Lessons
 
 <div id="lessons" markdown="1">
 
-1.  [Introduction](./01_intro/)
-1.  [HTML and CSS](./02_htmlcss/)
-1.  [An Hour of JavaScript](./03_js/)
-1.  [JavaScript in the Browser](./04_browser/)
-1.  [HTTP](./05_http/)
-1.  [A Server](./06_server/)
-1.  [Using a Database](./07_db/)
-1.  [Testing the Server](./08_test/)
-1.  [Serving HTML](./09_view/)
-1.  [Using Forms](./10_forms/)
-1.  [Using HTMX](./11_htmx/)
-1.  [Database Migration](./12_migrate/)
-1.  [Authentication](./13_auth/)
-1.  [Testing in the Browser](./14_automate/)
-1.  [Encryption](./15_crypt/)
-1.  [Uploading Files](./16_upload/)
-1.  [Logging and Auditing](./17_log/)
-1.  [Permissions](./18_perm/)
-1.  [Accessibility](./19_access/)
-1.  [A Graphical User Interface](./20_gui/)
-1.  [Dynamic Graphics](./21_graphics/)
-1.  [Internationalization](./22_intl/)
-1.  [Sessions](./23_sessions/)
-1.  [Caching](./24_cache/)
+1.  [Introduction](@/01_intro/)
+1.  [HTML and CSS](@/02_htmlcss/)
+1.  [An Hour of JavaScript](@/03_js/)
+1.  [JavaScript in the Browser](@/04_browser/)
+1.  [HTTP](@/05_http/)
+1.  [A Server](@/06_server/)
+1.  [Using a Database](@/07_db/)
+1.  [Testing the Server](@/08_test/)
+1.  [Serving HTML](@/09_view/)
+1.  [Using Forms](@/10_forms/)
+1.  [Using HTMX](@/11_htmx/)
+1.  [Database Migration](@/12_migrate/)
+1.  [Authentication](@/13_auth/)
+1.  [Testing in the Browser](@/14_automate/)
+1.  [Encryption](@/15_crypt/)
+1.  [Uploading Files](@/16_upload/)
+1.  [Logging and Auditing](@/17_log/)
+1.  [Permissions](@/18_perm/)
+1.  [Accessibility](@/19_access/)
+1.  [A Graphical User Interface](@/20_gui/)
+1.  [Dynamic Graphics](@/21_graphics/)
+1.  [Internationalization](@/22_intl/)
+1.  [Sessions](@/23_sessions/)
+1.  [Caching](@/24_cache/)
 
 </div>
+
+</div>
+<div class="col-6" markdown="1">
 
 ##  Appendices
 
 <div id="appendices" markdown="1">
 
-1.  [Designing a Workflow](./98_workflow/)
-1.  [Certificates](./99_cert/)
-1.  [License](./LICENSE.md)
-1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
-1.  [Contributing](./CONTRIBUTING.md)
-1.  [Bibliography](./bibliography/)
-1.  [Glossary](./glossary/)
+1.  [Designing a Workflow](@/98_workflow/)
+1.  [Certificates](@/99_cert/)
+1.  [License](@/license/)
+1.  [Code of Conduct](@/conduct/)
+1.  [Contributing](@/contributing/)
+1.  [Bibliography](@/bibliography/)
+1.  [Glossary](@/glossary/)
 
 </div>
-
-## Acknowledgments {: #acknowledgments}
-
--   [*Juanan Pereira*][pereira-juanan] is a lecturer in Computer Science
-    at the University of the Basque Country (UPV/EHU), where he researches and tries 
-    to integrate open source software, software engineering, and LLMs in education.
-
--   [*Greg Wilson*][wilson-greg] is a programmer, author, and educator based in Toronto.
-    He was the co-founder and first Executive Director of Software Carpentry
-    and received ACM SIGSOFT's Influential Educator Award in 2020.
-
--   Grateful to co-authors of [[Gans2020](b:Gans2020)]
--   And to everyone who gave feedback on [[Wilson2022](b:Wilson2022), [Wilson2024](b:Wilson2024)]
+</div>
+</div>
 
 <p class="center">
   <em>
@@ -100,6 +86,3 @@ Suggestions and help are greatly appreciated.
     help who you can
   </em>
 </p>
-
-[pereira-juanan]: https://ikasten.io/
-[wilson-greg]: https://third-bit.com/

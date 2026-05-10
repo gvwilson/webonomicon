@@ -4,17 +4,14 @@
 
 ## Overview
 
-<figure id="browser-concept-map">
-  <img src="browser_concept_map.svg" alt="concept map of JavaScript in the browser"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="browser-concept-map" img="browser_concept_map.svg" alt="concept map of JavaScript in the browser" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
 -   JavaScript was created to make web pages interactive
     -   Load into page (several ways)
     -   Trigger execution (also several ways)
-    -   Manipulate [Document Object Model](g:dom) (DOM)
+    -   Manipulate [%g dom "Document Object Model" %] (DOM)
 -   [`log_on_load.html`](./log_on_load.html)
     -   Put code directly in `<script>` tag in head of page
     -   Executed as the page loads
@@ -23,7 +20,7 @@
         -   Code may run while browser is still converting HTML to DOM (or loading other assets)
 -   [`show_headings.html`](./show_headings.html) finds things in the DOM
     -   `document` refers to the content of the page
-    -   `getElementsByTagName` finds nodes match a [CSS selector](g:css-selector)
+    -   `getElementsByTagName` finds nodes match a [%g css-selector "CSS selector" %]
 -   But it doesn't show anything
     -   Code may run etc.
 -   [`show_headings_onload.html`](./show_headings_onload.html) is a better approach
@@ -33,7 +30,7 @@
     -   JavaScript changes in-memory representation of page
     -   Browser decides what to re-draw and when
 -   [`emphasize_multistep.html`](./emphasize_multistep.html) does the same thing by explicitly manufacturing new nodes
--   [`button_click.html`](./button_click.html) adds a button with an [event handler](g:event-handler)
+-   [`button_click.html`](./button_click.html) adds a button with an [%g event-handler "event handler" %]
     -   Browser standards define lots of different events you can listen to
     -   You provide the function, you browser calls it when something happens
 -   [`emphasize_click.html`](./emphasize_click.html)
@@ -41,6 +38,6 @@
     -   But now we have to manage state
 -   [`async_fetch.html`](./async_fetch.html) introduces two new ideas
     -   Put the code in [`async_fetch.js`](./async_fetch.js)
-    -   Use [`async`](g:js-async) and [`await`](g:js-await) keywords to wait for things
-    -   [`server.py`](./server.py) returns [RGB](g:rgb) color components
+    -   Use [%g js-async "`async`" %] and [%g js-await "`await`" %] keywords to wait for things
+    -   [`server.py`](./server.py) returns [%g rgb "RGB" %] color components
     -   Use `style` property rather than `setAttribute` because style can have many sub-properties

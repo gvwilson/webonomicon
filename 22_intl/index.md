@@ -2,9 +2,9 @@
 
 <p id="terms"></p>
 
--   [Internationalization](g:i18n) (often abbreviated "i18n" because of the number of letters)
+-   [%g i18n "Internationalization" %] (often abbreviated "i18n" because of the number of letters)
     is the preparation of software for multilingual support
--   [Localization](g:l10n) (often abbreviated "l10n") is the process of making internationalized software accessible
+-   [%g l10n "Localization" %] (often abbreviated "l10n") is the process of making internationalized software accessible
     to people using various languages and symbologies
 -   A lot of software is built on top of [gettext][gettext]
 -   We will build our own to show how it works

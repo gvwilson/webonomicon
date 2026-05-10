@@ -5,80 +5,84 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HTTP</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a class="active" href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1>HTTP</h1>
-<p id="terms">Terms defined: <a href="../glossary/#dns">Domain Name System (DNS)</a>, <a href="../glossary/#http-request">HTTP request</a>, <a href="../glossary/#http-response">HTTP response</a>, <a href="../glossary/#http">HyperText Transfer Protocol (HTTP)</a>, <a href="../glossary/#ip-address">IP address</a>, <a href="../glossary/#ip">Internet Protocol</a>, <a href="../glossary/#tcp">Transmission Control Protocol</a>, <a href="../glossary/#client">client</a>, <a href="../glossary/#port">port</a>, <a href="../glossary/#server">server</a>, <a href="../glossary/#socket">socket</a></p>
+
 <h2>Overview</h2>
-<figure id="http-concept-map">
+<figure id="f:http-concept-map">
 <img alt="concept map of HTTP" src="http_concept_map.svg"/>
-<figcaption>Figure 1: Concept Map</figcaption>
+<figcaption>Figure 1: Figure 1: Concept Map</figcaption>
 </figure>
 <h2>Outline</h2>
 <ul>
 <li>Typical web application has clients and servers<ul>
-<li><a href="../glossary/#client">Client</a> initiates communication by sending a message and waiting for a response</li>
-<li><a href="../glossary/#server">Server</a> waits for requests and then replies to them</li>
+<li><a class="gl-ref" href="../glossary/#client">Client</a> initiates communication by sending a message and waiting for a response</li>
+<li><a class="gl-ref" href="../glossary/#server">Server</a> waits for requests and then replies to them</li>
 </ul>
 </li>
-<li>Communicate using <a href="../glossary/#ip">Internet Protocol</a> (IP), and specifically <a href="../glossary/#tcp">Transmission Control Protocol</a> (TCP/IP)<ul>
+<li>Communicate using <a class="gl-ref" href="../glossary/#ip">Internet Protocol</a> (IP), and specifically <a class="gl-ref" href="../glossary/#tcp">Transmission Control Protocol</a> (TCP/IP)<ul>
 <li>Makes communication between computers look like reading and writing files</li>
 </ul>
 </li>
-<li>A <a href="../glossary/#socket">socket</a> is one end of a point-to-point channel<ul>
+<li>A <a class="gl-ref" href="../glossary/#socket">socket</a> is one end of a point-to-point channel<ul>
 <li>Consists of an IP address (identifies machine) and a port on that machine</li>
-<li><a href="../glossary/#ip-address">IP address</a> is four 8-bit numbers(e.g., <code>93.184.216.34</code>)</li>
-<li><a href="../glossary/#dns">Domain Name System</a> (DNS) matches these to symbolic names like <code>example.com</code></li>
-<li><a href="../glossary/#port">Port</a> is a number in the range 0-65535</li>
+<li><a class="gl-ref" href="../glossary/#ip-address">IP address</a> is four 8-bit numbers(e.g., <code>93.184.216.34</code>)</li>
+<li><a class="gl-ref" href="../glossary/#dns">Domain Name System</a> (DNS) matches these to symbolic names like <code>example.com</code></li>
+<li><a class="gl-ref" href="../glossary/#port">Port</a> is a number in the range 0-65535</li>
 <li>Only one process can use a port at a time</li>
 </ul>
 </li>
@@ -93,39 +97,39 @@
 <li><code>TCPServer</code> creates a new handler each time it gets a connection and calls that object's <code>handle</code> method</li>
 <li><a href="./simple_server.py"><code>simple_server.py</code></a> reads up to 1024 bytes of data and returns a message</li>
 </ul>
-<pre class=""><code data-file="simple_server.py">"""Basic socket server."""
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="sd">"""Basic socket server."""</span>
 
-import socketserver
-
-
-CHUNK_SIZE = 1024
-SERVER_ADDRESS = ("localhost", 5000)
+<span class="kn">import</span><span class="w"> </span><span class="nn">socketserver</span>
 
 
-class MyHandler(socketserver.BaseRequestHandler):
-    def handle(self):
-        data = self.request.recv(CHUNK_SIZE)
-        cli = self.client_address[0]
-        msg = f"server received {len(data)} bytes from {cli}"
-        print(msg)
-        print(data)
-        self.request.sendall(bytes(msg, "utf-8"))
+<span class="n">CHUNK_SIZE</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">SERVER_ADDRESS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
 
 
-if __name__ == "__main__":
-    server = socketserver.TCPServer(SERVER_ADDRESS, MyHandler)
-    server.serve_forever()
-</code></pre>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyHandler</span><span class="p">(</span><span class="n">socketserver</span><span class="o">.</span><span class="n">BaseRequestHandler</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">CHUNK_SIZE</span><span class="p">)</span>
+        <span class="n">cli</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"server received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">}</span><span class="s2"> bytes from </span><span class="si">{</span><span class="n">cli</span><span class="si">}</span><span class="s2">"</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">))</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">socketserver</span><span class="o">.</span><span class="n">TCPServer</span><span class="p">(</span><span class="n">SERVER_ADDRESS</span><span class="p">,</span> <span class="n">MyHandler</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</code></pre></div>
 <ul>
 <li>Use <a href="https://en.wikipedia.org/wiki/Netcat">netcat</a> to open a connection and send some text with <a href="./send_with_nc.sh"><code>send_with_nc.sh</code></a></li>
 </ul>
-<pre class=""><code data-file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code>echo "testing" | nc 127.0.0.1 5000
+</code></pre></div>
 <h3>HTTP Request and Response</h3>
 <ul>
-<li><a href="../glossary/#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
-<li>Send <a href="../glossary/#http-request">request</a> with path, headers, and body</li>
-<li>Get <a href="../glossary/#http-response">response</a> with status, headers, and content</li>
+<li><a class="gl-ref" href="../glossary/#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
+<li>Send <a class="gl-ref" href="../glossary/#http-request">request</a> with path, headers, and body</li>
+<li>Get <a class="gl-ref" href="../glossary/#http-response">response</a> with status, headers, and content</li>
 </ul>
 </li>
 <li>Minimal request is just <code>GET /index.html HTTP/1.1</code><ul>
@@ -136,52 +140,62 @@ if __name__ == "__main__":
 </li>
 <li><a href="./http_request_headers.txt"><code>http_request_headers.txt</code></a> shows more realistic request</li>
 </ul>
-<pre class=""><code data-file="http_request_headers.txt">GET /index.html HTTP/1.1
-Accept: text/html
-Accept-Language: en, fr
-If-Modified-Since: 16-May-2024
-</code></pre>
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="nf">GET</span> <span class="nn">/index.html</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">text/html</span>
+<span class="na">Accept-Language</span><span class="o">:</span> <span class="l">en, fr</span>
+<span class="na">If-Modified-Since</span><span class="o">:</span> <span class="l">16-May-2024</span>
+</code></pre></div>
 <ul>
 <li><a href="./http_response.txt"><code>http_response.txt</code></a> shows possible response</li>
 </ul>
-<pre class=""><code data-file="http_response.txt">HTTP/1.1 200 OK
-Date: Thu, 16 June 2023 12:28:53 GMT
-Content-Type: text/html
-Content-Length: 53
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Thu, 16 June 2023 12:28:53 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">53</span>
 
-&lt;html&gt;
-&lt;body&gt;
-&lt;h1&gt;Hello, World!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
 <ul>
 <li><a href="./http_server.py"><code>http_server.py</code></a> responds to <code>GET</code> with same page every time.</li>
 </ul>
-<pre class=""><code data-file="http_server.py">from http.server import BaseHTTPRequestHandler, HTTPServer
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">http.server</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseHTTPRequestHandler</span><span class="p">,</span> <span class="n">HTTPServer</span>
 
-PAGE = """&lt;html&gt;&lt;body&gt;&lt;p&gt;path: {path}&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"""
+<span class="n">PAGE</span> <span class="o">=</span> <span class="s2">"""&lt;html&gt;&lt;body&gt;&lt;p&gt;path: </span><span class="si">{path}</span><span class="s2">&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"""</span>
 
-class RequestHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        page = PAGE.format(path=self.path)
-        content = bytes(page, "utf-8")
-        self.send_response(200)
-        self.send_header("Content-Type", "text/html; charset=utf-8")
-        self.send_header("Content-Length", str(len(content)))
-        self.end_headers()
-        self.wfile.write(content)
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestHandler</span><span class="p">(</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">PAGE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">"Content-Type"</span><span class="p">,</span> <span class="s2">"text/html; charset=utf-8"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">"Content-Length"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 
-if __name__ == "__main__":
-    server_address = ("localhost", 5000)
-    server = HTTPServer(server_address, RequestHandler)
-    server.serve_forever()
-</code></pre>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">server_address</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">HTTPServer</span><span class="p">(</span><span class="n">server_address</span><span class="p">,</span> <span class="n">RequestHandler</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</code></pre></div>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../04_browser/">JavaScript in the Browser</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../06_server/">A Server</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

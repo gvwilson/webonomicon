@@ -5,156 +5,160 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Using a Database</title>
-<link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="../static/page.css" rel="stylesheet" type="text/css"/>
+<meta content="The Webonomicon" name="description"/>
+<link href="../_static/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/chota.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/mccole.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav>
-<a href="../">Home</a>
-      ·
-      <span class="dropdown">
-<a href="#">Lessons</a>
-<span class="dropdown-content" id="nav-lessons">
-<a href="../01_intro/">Introduction</a>
-<a href="../02_htmlcss/">HTML and CSS</a>
-<a href="../03_js/">An Hour of JavaScript</a>
-<a href="../04_browser/">JavaScript in the Browser</a>
-<a href="../05_http/">HTTP</a>
-<a href="../06_server/">A Server</a>
-<a href="../07_db/">Using a Database</a>
-<a href="../08_test/">Testing the Server</a>
-<a href="../09_view/">Serving HTML</a>
-<a href="../10_forms/">Using Forms</a>
-<a href="../11_htmx/">Using HTMX</a>
-<a href="../12_migrate/">Database Migration</a>
-<a href="../13_auth/">Authentication</a>
-<a href="../14_automate/">Testing in the Browser</a>
-<a href="../15_crypt/">Encryption</a>
-<a href="../16_upload/">Uploading Files</a>
-<a href="../17_log/">Logging and Auditing</a>
-<a href="../18_perm/">Permissions</a>
-<a href="../19_access/">Accessibility</a>
-<a href="../20_gui/">A Graphical User Interface</a>
-<a href="../21_graphics/">Dynamic Graphics</a>
-<a href="../22_intl/">Internationalization</a>
-<a href="../23_sessions/">Sessions</a>
-<a href="../24_cache/">Caching</a>
-</span>
-</span>
-      ·
-      <span class="dropdown">
-<a href="#">Extras</a>
-<span class="dropdown-content" id="nav-extras">
-<a href="../98_workflow/">Designing a Workflow</a>
-<a href="../99_cert/">Certificates</a>
-<a href="../license/">License</a>
-<a href="../conduct/">Code of Conduct</a>
-<a href="../contrib/">Contributing</a>
-<a href="../bibliography/">Bibliography</a>
-<a href="../glossary/">Glossary</a>
-</span>
-</span>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Site navigation" class="nav">
+<div class="nav-left">
+<a class="brand" href="../">The Webonomicon</a>
+<div class="dropdown">
+<button aria-controls="nav-lessons" aria-haspopup="true">Lessons</button>
+<ul class="dropdown-content" id="nav-lessons">
+<li><a href="../01_intro/">Introduction</a></li>
+<li><a href="../02_htmlcss/">HTML and CSS</a></li>
+<li><a href="../03_js/">An Hour of JavaScript</a></li>
+<li><a href="../04_browser/">JavaScript in the Browser</a></li>
+<li><a href="../05_http/">HTTP</a></li>
+<li><a href="../06_server/">A Server</a></li>
+<li><a class="active" href="../07_db/">Using a Database</a></li>
+<li><a href="../08_test/">Testing the Server</a></li>
+<li><a href="../09_view/">Serving HTML</a></li>
+<li><a href="../10_forms/">Using Forms</a></li>
+<li><a href="../11_htmx/">Using HTMX</a></li>
+<li><a href="../12_migrate/">Database Migration</a></li>
+<li><a href="../13_auth/">Authentication</a></li>
+<li><a href="../14_automate/">Testing in the Browser</a></li>
+<li><a href="../15_crypt/">Encryption</a></li>
+<li><a href="../16_upload/">Uploading Files</a></li>
+<li><a href="../17_log/">Logging and Auditing</a></li>
+<li><a href="../18_perm/">Permissions</a></li>
+<li><a href="../19_access/">Accessibility</a></li>
+<li><a href="../20_gui/">A Graphical User Interface</a></li>
+<li><a href="../21_graphics/">Dynamic Graphics</a></li>
+<li><a href="../22_intl/">Internationalization</a></li>
+<li><a href="../23_sessions/">Sessions</a></li>
+<li><a href="../24_cache/">Caching</a></li>
+</ul>
+</div>
+<div class="dropdown">
+<button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
+<ul class="dropdown-content" id="nav-appendices">
+<li><a href="../98_workflow/">Designing a Workflow</a></li>
+<li><a href="../99_cert/">Certificates</a></li>
+<li><a href="../license/">License</a></li>
+<li><a href="../conduct/">Code of Conduct</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
+<li><a href="../glossary/">Glossary</a></li>
+</ul>
+</div>
+</div>
 </nav>
-<main>
+<main id="main-content">
 <h1>Using a Database</h1>
-<p id="terms">Terms defined: <a href="../glossary/#db-schema">database schema</a>, <a href="../glossary/#factory-function">factory function</a>, <a href="../glossary/#multithreading">multithreading</a>, <a href="../glossary/#orm">object-relational mapper (ORM)</a>, <a href="../glossary/#query-builder">query builder</a></p>
+
 <h2>Overview</h2>
-<figure id="db-concept-map">
+<figure id="f:db-concept-map">
 <img alt="concept map of database interaction in Python" src="db_concept_map.svg"/>
-<figcaption>Figure 1: Concept Map</figcaption>
+<figcaption>Figure 1: Figure 1: Concept Map</figcaption>
 </figure>
 <h2>Outline</h2>
 <h3>Direct SQL</h3>
 <ul>
 <li>Use <a href="https://www.sqlite.org/">SQLite</a> database in <code>./data/lab.db</code> instead of CSV file</li>
-<li>Install <code>_dict_factory</code> <a href="../glossary/#factory-function">factory function</a>
+<li>Install <code>_dict_factory</code> <a class="gl-ref" href="../glossary/#factory-function">factory function</a>
     to get results as list of dictionaries instead of list of tuples</li>
 <li>And use a flag to convert types like dates and times (used later)</li>
 <li><a href="./models_sql.py"><code>models_sql.py</code></a> implements model part of model-view-controller (MVC)<ul>
 <li>One function for each question we might ask of our data</li>
-<li>Use SQL directly instead of an <a href="../glossary/#orm">object-relational mapper</a>
+<li>Use SQL directly instead of an <a class="gl-ref" href="../glossary/#orm">object-relational mapper</a>
     like <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, <a href="https://sqlmodel.tiangolo.com/">SQLModel</a>, or <a href="https://ponyorm.org/">Pony</a></li>
-<li>ORMs can be hard to debug and don't perfectly insulate programs from changes to <a href="../glossary/#db-schema">schema</a></li>
+<li>ORMs can be hard to debug and don't perfectly insulate programs from changes to <a class="gl-ref" href="../glossary/#db-schema">schema</a></li>
 </ul>
 </li>
 </ul>
-<pre class=""><code data-file="models_sql.py">"""Get data from database."""
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="sd">"""Get data from database."""</span>
 
-import os
-import sqlite3
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
-import util
-
-
-ENV_VAR = "DATA"
+<span class="kn">import</span><span class="w"> </span><span class="nn">util</span>
 
 
-class ModelException(Exception):
-    """Problems with queries."""
-
-    def __init__(self, msg):
-        self._msg = msg
-
-    def __str__(self):
-        return self._msg
+<span class="n">ENV_VAR</span> <span class="o">=</span> <span class="s2">"DATA"</span>
 
 
-def connect():
-    """Connect to database."""
-    path = os.getenv(ENV_VAR)
-    if not path:
-        raise ModelException(f"Environment variable {ENV_VAR} not set")
-    connection = sqlite3.connect(path, detect_types=sqlite3.PARSE_DECLTYPES)
-    connection.row_factory = util.dict_factory
-    return connection
+<span class="k">class</span><span class="w"> </span><span class="nc">ModelException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Problems with queries."""</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_msg</span> <span class="o">=</span> <span class="n">msg</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_msg</span>
 
 
-def all_staff():
-    """Get all staff."""
-    query = """
-    select * from staff
-    """
-    try:
-        connection = connect()
-        cursor = connection.execute(query)
-        return cursor.fetchall()
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
+<span class="k">def</span><span class="w"> </span><span class="nf">connect</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Connect to database."""</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">ENV_VAR</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Environment variable </span><span class="si">{</span><span class="n">ENV_VAR</span><span class="si">}</span><span class="s2"> not set"</span><span class="p">)</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">detect_types</span><span class="o">=</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">PARSE_DECLTYPES</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">row_factory</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">dict_factory</span>
+    <span class="k">return</span> <span class="n">connection</span>
 
 
-def column(name):
-    """Get a single column of staff."""
-    query = f"""
-    select {name} from staff
-    """
-    try:
-        connection = connect()
-        cursor = connection.execute(query)
-        return [r[name] for r in cursor.fetchall()]
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
+<span class="k">def</span><span class="w"> </span><span class="nf">all_staff</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Get all staff."""</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">    select * from staff</span>
+<span class="s2">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
 
 
-def row(staff_id):
-    """Get a single row of staff."""
-    query = """
-    select * from staff where staff_id=?
-    """
-    try:
-        connection = connect()
-        cursor = connection.execute(query, (staff_id,))
-        result = cursor.fetchall()
-        if len(result) == 0:
-            raise ModelException(f"no rows match {staff_id}")
-        elif len(result) &gt; 1:
-            raise ModelException(f"multiple rows match {staff_id}")
-        return result[0]
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
-</code></pre>
+<span class="k">def</span><span class="w"> </span><span class="nf">column</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Get a single column of staff."""</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    select </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> from staff</span>
+<span class="s2">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">row</span><span class="p">(</span><span class="n">staff_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Get a single row of staff."""</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">    select * from staff where staff_id=?</span>
+<span class="s2">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="p">(</span><span class="n">staff_id</span><span class="p">,))</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"no rows match </span><span class="si">{</span><span class="n">staff_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"multiple rows match </span><span class="si">{</span><span class="n">staff_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+</code></pre></div>
 <ul>
 <li>Re-create connection each time model is accessed<ul>
-<li>Creating it once and attaching to the <a href="https://flask.palletsprojects.com/">Flask</a> app fails because of <a href="../glossary/#multithreading">multithreading</a></li>
+<li>Creating it once and attaching to the <a href="https://flask.palletsprojects.com/">Flask</a> app fails because of <a class="gl-ref" href="../glossary/#multithreading">multithreading</a></li>
 </ul>
 </li>
 <li>Catch SQLite exceptions and raise our own so that our server only has to catch one thing</li>
@@ -168,111 +172,121 @@ def row(staff_id):
 </ul>
 </li>
 <li>And embedded SQL isn't actually that easy to read</li>
-<li>Use the <a href="https://pypika.readthedocs.io/">PyPika</a> <a href="../glossary/#query-builder">query builder</a></li>
+<li>Use the <a href="https://pypika.readthedocs.io/">PyPika</a> <a class="gl-ref" href="../glossary/#query-builder">query builder</a></li>
 <li><a href="./pika_demo.py"><code>pika_demo.py</code></a> is a proof of concept</li>
 </ul>
-<pre class=""><code data-file="pika_demo.py">from pypika import Query, Table
-import sqlite3
-import sys
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pypika</span><span class="w"> </span><span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
-import util
+<span class="kn">import</span><span class="w"> </span><span class="nn">util</span>
 
-connection = sqlite3.connect(sys.argv[1], detect_types=sqlite3.PARSE_DECLTYPES)
-connection.row_factory = util.dict_factory
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">detect_types</span><span class="o">=</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">PARSE_DECLTYPES</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">row_factory</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">dict_factory</span>
 
-staff = Table("staff")
-q = Query.from_(staff).select("staff_id", "personal", "family")
-print(str(q))
-cursor = connection.execute(str(q))
-for row in cursor.fetchall():
-    print(row)
-</code></pre>
+<span class="n">staff</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">"staff"</span><span class="p">)</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"staff_id"</span><span class="p">,</span> <span class="s2">"personal"</span><span class="p">,</span> <span class="s2">"family"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
 <ul>
 <li><a href="./models_pika.py"><code>models_pika.py</code></a> is shorter and more readable than the SQL version</li>
 </ul>
-<pre class=""><code data-file="models_pika.py">"""Get data from database."""
+<div class="codehilite"><pre class="" tabindex="0"><span></span><code><span class="sd">"""Get data from database."""</span>
 
-import os
-from pypika import Query, Table
-import sqlite3
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pypika</span><span class="w"> </span><span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
-import util
-
-
-ENV_VAR = "DATA"
-STAFF_COLUMNS = ["staff_id", "personal", "family"]
+<span class="kn">import</span><span class="w"> </span><span class="nn">util</span>
 
 
-class ModelException(Exception):
-    """Problems with queries."""
-
-    def __init__(self, msg):
-        self._msg = msg
-
-    def __str__(self):
-        return self._msg
+<span class="n">ENV_VAR</span> <span class="o">=</span> <span class="s2">"DATA"</span>
+<span class="n">STAFF_COLUMNS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"staff_id"</span><span class="p">,</span> <span class="s2">"personal"</span><span class="p">,</span> <span class="s2">"family"</span><span class="p">]</span>
 
 
-def connect():
-    """Connect to database."""
-    path = os.getenv(ENV_VAR)
-    if not path:
-        raise ModelException(f"Environment variable {ENV_VAR} not set")
-    connection = sqlite3.connect(path, detect_types=sqlite3.PARSE_DECLTYPES)
-    connection.row_factory = util.dict_factory
-    return connection
+<span class="k">class</span><span class="w"> </span><span class="nc">ModelException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Problems with queries."""</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_msg</span> <span class="o">=</span> <span class="n">msg</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_msg</span>
 
 
-def all_staff():
-    """Get all staff."""
-    staff = Table("staff")
-    query = Query.from_(staff).select(*STAFF_COLUMNS)
-    try:
-        connection = connect()
-        cursor = connection.execute(str(query))
-        return cursor.fetchall()
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
+<span class="k">def</span><span class="w"> </span><span class="nf">connect</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Connect to database."""</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">ENV_VAR</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Environment variable </span><span class="si">{</span><span class="n">ENV_VAR</span><span class="si">}</span><span class="s2"> not set"</span><span class="p">)</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">detect_types</span><span class="o">=</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">PARSE_DECLTYPES</span><span class="p">)</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">row_factory</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">dict_factory</span>
+    <span class="k">return</span> <span class="n">connection</span>
 
 
-def column(name):
-    """Get a single column of staff."""
-    if name not in STAFF_COLUMNS:
-        raise ModelException(f"Column '{name}' does not exist")
-
-    staff = Table("staff")
-    query = Query.from_(staff).select(name)
-    try:
-        connection = connect()
-        cursor = connection.execute(str(query))
-        return [r[name] for r in cursor.fetchall()]
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
+<span class="k">def</span><span class="w"> </span><span class="nf">all_staff</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Get all staff."""</span>
+    <span class="n">staff</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">"staff"</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">STAFF_COLUMNS</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
 
 
-def row(staff_id):
-    """Get a single row of staff."""
-    staff = Table("staff")
-    query = Query.from_(staff) \
-                 .select(*STAFF_COLUMNS) \
-                 .where(staff.staff_id == staff_id)
-    try:
-        connection = connect()
-        cursor = connection.execute(str(query))
-        result = cursor.fetchall()
-        if len(result) == 0:
-            raise ModelException(f"no rows match {staff_id}")
-        elif len(result) &gt; 1:
-            raise ModelException(f"multiple rows match {staff_id}")
-        return result[0]
-    except sqlite3.DatabaseError as exc:
-        raise ModelException(str(exc))
-</code></pre>
+<span class="k">def</span><span class="w"> </span><span class="nf">column</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Get a single column of staff."""</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STAFF_COLUMNS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Column '</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">' does not exist"</span><span class="p">)</span>
+
+    <span class="n">staff</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">"staff"</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">row</span><span class="p">(</span><span class="n">staff_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Get a single row of staff."""</span>
+    <span class="n">staff</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">"staff"</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span> \
+                 <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">STAFF_COLUMNS</span><span class="p">)</span> \
+                 <span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">staff</span><span class="o">.</span><span class="n">staff_id</span> <span class="o">==</span> <span class="n">staff_id</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">connection</span> <span class="o">=</span> <span class="n">connect</span><span class="p">()</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"no rows match </span><span class="si">{</span><span class="n">staff_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="sa">f</span><span class="s2">"multiple rows match </span><span class="si">{</span><span class="n">staff_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">DatabaseError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ModelException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
+</code></pre></div>
 </main>
-<footer>
+<footer aria-label="Page navigation">
+<div class="row">
+<div class="col-3 left">
+<span aria-hidden="true">⇐</span> <a href="../06_server/">A Server</a>
+</div>
+<div class="col-6 center">
 <a href="../">The Webonomicon</a>
-      copyright © 2025
-      <a href="../#acknowledgments">the authors</a>
+	  ©
+	  <a href="../#acknowledgments">the authors</a>
+</div>
+<div class="col-3 right">
+<a href="../08_test/">Testing the Server</a> <span aria-hidden="true">⇒</span>
+</div>
+</div>
 </footer>
 </body>
 </html>

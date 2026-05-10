@@ -4,23 +4,20 @@
 
 ## Overview
 
-<figure id="gui-concept-map">
-  <img src="gui_concept_map.svg" alt="concept map of GUI in browser"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="gui-concept-map" img="gui_concept_map.svg" alt="concept map of GUI in browser" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
 -   Use [Alpine][alpine] to make a graphical editor for plate layouts
     -   What treatment is applied to each cell
     -   Personal details
--   Use CSS [flexbox](g:flexbox) layout to create two-column page
+-   Use CSS [%g flexbox "flexbox" %] layout to create two-column page
 -   [`handwritten.html`](./handwritten.html) creates everything manually
 -   Shared data stored in `x-data` attribute of enclosing `div` (the row)
     -   `treatments` is available treatments (including empty string for "none")
     -   `current` is currently-selected treatment
     -   `data` is the plate data keyed by row/column identifier
--   Selectors are [radio buttons](g:radio-button)
+-   Selectors are [%g radio-button "radio buttons" %]
     -   Share the same name to make them a group (only one can be selected at a time)
     -   Value is self-explanatory
     -   `x-model` property tells [Alpine][alpine] what to assign the value to

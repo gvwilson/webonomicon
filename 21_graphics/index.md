@@ -4,17 +4,14 @@
 
 ## Overview
 
-<figure id="graphics-concept-map">
-  <img src="graphics_concept_map.svg" alt="concept map of graphics and charts in browser"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure slug="graphics-concept-map" img="graphics_concept_map.svg" alt="concept map of graphics and charts in browser" caption="Figure 1: Concept Map" %]
 
 ## Outline
 
--   [SVG](g:svg) is a widely-used [vector graphics](g:vector-graphics) format
+-   [%g svg "SVG" %] is a widely-used [%g vector-graphics "vector graphics" %] format
     -   Represent lines, circles, etc. in a notation like HTML
     -   Also represent transformations (move, rescale, etc.)
-    -   Scales more smoothly than [raster graphics](g:raster-graphics) like PNG and JPEG
+    -   Scales more smoothly than [%g raster-graphics "raster graphics" %] like PNG and JPEG
 -   [`shapes.html`](./shapes.html) and [`shapes.js`](./shapes.js)
     -   Create an SVG object and insert into the page
     -   Ask that object to create other shapes
